@@ -44,7 +44,6 @@ p {
     width: 65px;
     margin-top: 10px;
     float: left;
-    margin-right: 20px;
 }
 
 #nav {
@@ -71,9 +70,12 @@ p {
 
 .navigation li {
     float: left;
-    padding: 0 30px 0 0;
     font-size: 14px;
     margin: 0px;
+}
+
+.navigation li a {
+    padding: 0 15px;
 }
 
 .navigation li:first-child {
@@ -160,11 +162,11 @@ p {
 }
 
 #slide1 h1 img {
-    opacity: 0;
+/*    opacity: 0; */
 }
 
 .catch {
-    opacity: 0;
+/*    opacity: 0; */
     padding: 35px 40px;
     overflow: hidden;
     background: url(../images/catchBg.png) center top;
@@ -186,12 +188,12 @@ p {
 }
 
 .pointWrap h3 {
-    opacity: 0;
+/*    opacity: 0; */
     margin-left: -30px
 }
 
 .pointWrap p {
-    opacity: 0;
+/*    opacity: 0; */
 }
 
 .multiDevice {
@@ -250,7 +252,7 @@ h3 {
 }
 
 #slide2 h1 {
-    opacity: 0.05;
+/*    opacity: 0.05; */
     font-size: 22pt;
     color: #000;
     text-align: center;
@@ -274,7 +276,7 @@ h3 {
 }
 
 #slide2 .samplecode {
-    opacity: 0.05;
+/*    opacity: 0.05; */
 }
 
 tt, code, pre {
@@ -332,7 +334,7 @@ tt, code, pre {
 }
 
 #slide3 h1 {
-    opacity: 0.05;
+/*    opacity: 0.05; */
     font-size: 20pt;
     color: #000;
     font-weight: normal;
@@ -362,7 +364,7 @@ tt, code, pre {
 }
 
 .bx-wrapper {
-    opacity: 0.05;
+/*    opacity: 0.05; */
 
 }
 
