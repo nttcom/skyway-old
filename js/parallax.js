@@ -31,8 +31,8 @@ $(function(){
 		
 		
 		if(y > box2Pos.top-700){			
-			$("#slide3 > div.container > #content3 >h1").delay( 10 ).animate({ opacity: '1'},{duration:1000,  easing:'easeInOutSine' });
-			$("#slide3 > div.container > #content3 > .bx-wrapper ").delay( 1000 ).animate({ opacity: '1'},{duration:2000,  easing:'easeInOutSine' });
+			$("#slide3 > div.container > #content >h1").delay( 10 ).animate({ opacity: '1'},{duration:1000,  easing:'easeInOutSine' });
+			$("#slide3 > div.container > #content > .bx-wrapper ").delay( 1000 ).animate({ opacity: '1'},{duration:2000,  easing:'easeInOutSine' });
 		}
 		
 		

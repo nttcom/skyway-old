@@ -54,33 +54,35 @@
     </header>
     <!-- /header -->
 
+
+
+
+
+
     <section class="no-slide">
-        <div class="container clearfix">
-            <div id="content" class="grid_12 formWrap">
-                <div class="formBox">
-                    <h1 class="formH1">申請フォーム</h1>
-                    <form action="https://skyway.io/mail/" method="post" class="form" id="regist">
-                        <dl class="formDL">
-                            <dt>お名前</dt>
-                            <p class="formP">個人のお名前をフルネームで入力してください。ハンドルネームはご遠慮ください。</p>
-                            <dd><input type="text" name="name" value="" size="40"  placeholder="" required></dd>
-                            <dt>連絡先メールアドレス</dt>
-                            <p class="formP">APIキーをお送りするメールアドレスを正確に入力してください。</p>
-                            <dd><input type="email" name="email" value="" size="40" class=""  placeholder="" required></dd>
-                            <dt>SkyWayを利用するドメイン（５つまで申請可能）</dt>
-                            <p class="formP">SkyWayを利用するドメイン名(FQDN)を正確に入力してください。</p>
-                            <dd><input type="text" name="domain1" value="" size="40" class=""  placeholder="（例）skyway.io" required>
-                            <input type="text" name="domain2" value="" size="40" class=""  placeholder="※任意入力" >
-                            <input type="text" name="domain3" value="" size="40" class=""  placeholder="※任意入力" >
-                            <input type="text" name="domain4" value="" size="40" class=""  placeholder="※任意入力" >
-                            <input type="text" name="domain5" value="" size="40" class=""  placeholder="※任意入力" ></dd>
-                        </dl>
-                        <p class=""><a href="policy.html" target="_blank">利用規約の確認</a></p>
-                        <input type="submit" value="利用規約に同意して申し込み" class="btnM">
-                    </form>
-                </div></div>
-        </div>
+      <div class="container clearfix">
+
+        <div id="content" class="grid_12 formWrap">
+          <div class="formBox">
+            <h1 class="formH1">申請フォーム</h1>
+            <form action="/" method="post" class="form" >
+              <dl class="formDL"><dt>お名前</dt><dd>
+                  <input type="text" name="your-name" value="" size="40"  placeholder="お名前" required></dd>
+
+                <dt>メールアドレス</dt><dd><input type="email" name="email" value="" size="40" class=""  placeholder="メールアドレス" required></dd>
+                <dt>ドメイン</dt><dd><input type="url" name="domein" value="" size="40" class=""  placeholder="ドメイン" required></dd>
+              </dl>
+              <input type="button" value="利用規約に同意して申し込み" class="btnM">
+              <p class=""><a href="tos.html" target="_blank">利用規約</a></p> 
+
+            </form>
+        </div></div>
+        
+
+      </div>
     </section>
+
+
 
     <!-- footer -->
     <footer class="footer">
@@ -116,6 +118,5 @@
 <script type="text/javascript" src="js/waypoints.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
-<script type="text/javascript" src="js/form.js"></script>
 </body>
 </html>
