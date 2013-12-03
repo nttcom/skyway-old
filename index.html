@@ -53,12 +53,12 @@
             <li><a href="./index.html">ホーム</a></li>
             <li><a href="registration.html">申し込み</a></li>
             <li><a href="https://github.com/nttcom/skyway" target="_blank">コード</a></li>
-            <li><a href="../docs/">ドキュメント</a></li>
+            <li><a href="docs/">ドキュメント</a></li>
           </ul>
         </nav>
         <!-- /navi -->
       </div>
-      <a href="https://github.com/skyway" class="forkme"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+      <a href="https://github.com/nttcom/skyway" class="forkme"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     </header>
     <!-- /header -->
 
@@ -67,7 +67,7 @@
     <section class="slide slidetop" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
       <div class="container clearfix">
 
-        <div id="content" class="grid_12  tar">
+        <div id="content1" class="grid_12  tar">
           <h1><img src="images/topImg.png" alt="SkyWay"></h1>
           <div class="catch topBox">
             <h2 class="catchcopy">A Simple and Flexible WebRTC Platform</h2>
@@ -108,7 +108,7 @@
     <section class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
       <div class="container clearfix">
 
-        <div id="content" class="grid_12">
+        <div id="content2" class="grid_12">
           <h1>使ってみよう</h1>
           
           <div class="grid_12 samplecode">
@@ -120,22 +120,19 @@
               <li>ライブラリをインクルードし、JavaScriptを書く
 
                 <div class="highlight">
-                  <pre>...
-                    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://skyway.io/js/peer.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-                    <span class="nt">&lt;script&gt;</span>
-                    <span class="c1">//...</span>
-                    <span class="kd">var</span> <span class="nx">peer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Peer</span><span class="p">(</span><span class="nx">myId</span><span class="p">,</span> <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="s1">'yourApiKey'</span><span class="p">});</span>
-                    <span class="kd">var</span> <span class="nx">conn</span> <span class="o">=</span> <span class="nx">peer</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">anotherId</span><span class="p">);</span>
-                    <span class="nx">conn</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-                    <span class="nx">conn</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">'hello peer!'</span><span class="p">);</span>
-                    <span class="p">});</span>
-                    <span class="c1">//...</span>
-                    <span class="nt">&lt;/script&gt;</span>
-                    <span class="nt">&lt;/body&gt;</span>
-                  </pre>
+<pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://skyway.io/dist/0.3/peer.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">peer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Peer</span><span class="p">(</span><span class="nx">myId</span><span class="p">,</span> <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="s1">'yourApiKey'</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">conn</span> <span class="o">=</span> <span class="nx">peer</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'anotherId'</span><span class="p">);</span>
+<span class="nx">conn</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">conn</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s1">'Input message'</span><span class="p">));</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre>
                 </div>
                 
-                <a class="btnM" href="../docs/#start">詳しくはスタートガイドへ</a>
+                <a class="btnM" href="docs/#start">詳しくはスタートガイドへ</a>
               </li>
 
             </ol>
@@ -149,17 +146,17 @@
     <!-- section3 -->
     <section class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
       <div class="container clearfix">
-        <div id="content" class="grid_12">
+        <div id="content3" class="grid_12">
           <h1>デモ</h1>
           <div class="demo">
-            <article class="grid_4 demoBox"><a href="https://skyway.io/demo/videochat/"><img src="images/videochat.png"></a><h3>シンプルなビデオチャット</h3>
-              <p class="demoP">相手のIDを入力してして接続する、シンプルなビデオチャット。</p><ul class="btnS"><li class="btnGotodemo"><a href="https://skyway.io/demo/videochat/">デモを見る</a></li><li class="btnGotocode"><a href="https://github.com/nttcom/skyway/tree/master/examples/videochat">コードを見る</a></li></ul></article> 
-            <article class="grid_4 demoBox"><a href="https://skyway.io/demo/chat.html"><img src="images/chat.png"></a><h3>ファイル転送付きチャット</h3>
-              <p class="demoP">相手のIDを入力して接続する、テキストチャット。ドラッグ＆ドロップでファイル転送ができる。</p> <ul class="btnS"><li class="btnGotodemo"><a href="https://skyway.io/demo/chat.html">デモを見る</a></li><li class="btnGotocode"><a href="https://github.com/nttcom/skyway/tree/master/examples">コードを見る</a></li></ul></article> 
+            <article class="grid_4 demoBox"><a href="http://cdn.peerjs.com/demo/videochat"><img src="images/videochat.png"></a><h3>シンプルなビデオチャット</h3>
+              <p class="demoP">相手のIDを入力してして接続する、シンプルなビデオチャット。</p><ul class="btnS"><li class="btnGotodemo"><a href="http://cdn.peerjs.com/demo/videochat">デモを見る</a></li><li class="btnGotocode"><a href="https://github.com/nttcom/peerjs/tree/master/examples/videochat">コードを見る</a></li></ul></article> 
+            <article class="grid_4 demoBox"><a href="http://cdn.peerjs.com/demo/chat.html"><img src="images/chat.png"></a><h3>ファイル転送付きチャット</h3>
+              <p class="demoP">相手のIDを入力して接続する、テキストチャット。ドラッグ＆ドロップでファイル転送ができる。</p> <ul class="btnS"><li class="btnGotodemo"><a href="http://cdn.peerjs.com/demo/chat.html">デモを見る</a></li><li class="btnGotocode"><a href="https://github.com/nttcom/peerjs/tree/master/examples">コードを見る</a></li></ul></article> 
             <article class="grid_4  demoBox omega">
-              <a href="https://skyway.io/demo/cpp/"><img src="images/caption_phone_chat.png" class="demoBox"></a><h3>字幕付きボイスチャット</h3>
+              <a href="https://skyway.io/examples/caption-phone"><img src="images/caption_phone_chat.png" class="demoBox"></a><h3>字幕付きボイスチャット</h3>
               <p class="demoP">会話の内容を自動で認識して、テキストチャットのように吹き出しで表示する機能がついたボイスチャット。</p>
-              <ul class="btnS"><li class="btnGotodemo"><a href="https://skyway.io/demo/cpp/">デモを見る</a></li><li class="btnGotocode"><a href="https://github.com/nttcom/skyway/tree/master/examples/cpp">コードを見る</a></li></ul>
+              <ul class="btnS"><li class="btnGotodemo"><a href="https://skyway.io/examples/caption-phone">デモを見る</a></li><li class="btnGotocode"><a href="https://github.com/nttcom/peerjs/tree/master/skyway_examples/caption-phone">コードを見る</a></li></ul>
             </article>
           </div>
         </div>
@@ -184,7 +181,6 @@
           <li><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
           </li>
           <li>
-            <div id="fb-root"></div>
             <div class="fb-like" data-href="http://nttcom.github.io/skyway/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div></li>
           <li><iframe src="github-btn.html?user=nttcom&repo=skyway&type=watch&count=true&size=small" allowtransparency="true" frameborder="0" scrolling="0" width="130px" height="20px"></iframe></li>
         </ul>

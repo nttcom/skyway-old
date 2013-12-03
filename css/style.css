@@ -74,6 +74,11 @@ p {
 	/*margin-left:25px;*/
 }
 
+.navigation li a:link {
+	color: #005ea6;
+	text-decoration: none;	
+}
+
 .navigation li a:visited{
 	color: #005ea6;
 }
@@ -296,9 +301,12 @@ border: 1px solid #ddd;
 font-size: 13px;
 
 line-height: 19px;
-overflow: auto;
+
 padding: 6px 10px;
 border-radius: 3px;
+ /* overflow: auto; */
+  overflow-x: scroll;
+  overflow-y: auto;
 }
 
 .highlight .na {
@@ -312,6 +320,10 @@ font-style: italic;
 }
 
 .highlight .s {
+color: #dd1144;
+}
+
+.highlight .s1 {
 color: #dd1144;
 }
 
