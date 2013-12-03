@@ -50,6 +50,7 @@ p {
     text-align: right;
     margin: 10px 0 0 0;
     float: left;
+	
 }
 
 .tagline {
@@ -486,7 +487,6 @@ a.btnM:active {
     background: url(../images/btnS.png) right 8px center no-repeat #369dde;
     color: #fff;
     border-radius: 5px;
-
     padding: 10px 23px 10px 10px;
     font-size: 12px;
     display: inline-block;
@@ -593,10 +593,17 @@ dl.formDL {
 
 }
 
+.formP {
+	text-align:left;
+	margin: 0.3em 0 0.7em 0;
+}
+
 dl.formDL dt {
-    width: 100%;
-    font-size: 11px;
-    text-align: left;
+    font-size: 1.3em;
+color: #8a8683;
+line-height: 1.1;
+font-weight: 400;
+text-align:left;
 
 }
 
@@ -1046,6 +1053,9 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+    .socialWrap {
+        display: none;
+    }
 
     #nav {
         width: 100%;
