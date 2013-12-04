@@ -1,0 +1,166 @@
+<head>
+  <title>PeerJS ドキュメント</title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href="./style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+</head>
+
+<body>
+  <section class="start">
+    <h1><a href="/">PeerJS</a> <span class="title">docs</span><span class="title">SkyWay対応版</span></h1>
+    <p><br>PeerJSは、WebRTCを利用したピア·ツー·ピアのデータ、ビデオ、オーディオ通信を簡単に実現することができます。このドキュメントでは、PeerJS APIの基本的な使い方を紹介します。PeerJSを用いた実装例をご覧になりたい方は, <a href="https://github.com/nttcom/peerjs/tree/master/examples">サンプル</a> ページを御覧ください。</P>
+      <p>このドキュメントは、NTTコミュニケーションズが提供する<a href="http://nttcom.github.io/skypeer-website/">クラウドサービス「SkyWay」</a>にて利用できるようにカスタマイズした<a href="https://github.com/nttcom/peerjs">PeerJS</a>を対象としています。</p>
+      <h2>セットアップ</h2>
+      <h3>1. PeerJSのクライアントライブラリをインクルード</h3>
+      <p>PeerJSクライアントライブラリをあなたのアプリケーションにインクルードしてください。</p>
+      <pre>&lt;script src="https://skyway.io/dist/0.3/peer.js"&gt;&lt;/script&gt;</pre>
+      <p>PeerJSライブラリ（<a download href="https://skyway.io/dist/0.3/peer.js">peer.js</a>, <a download href="https://skyway.io/dist/0.3/peer.min.js">peer.min.js</a>）はあなたのサーバ上に設置することができます。
+      ソースコードは<a href="https://github.com/nttcom/peerjs">Githubからfork</a>する事ができます。</p>
+      <h3>2. Peerオブジェクトを作成</h3>
+      <p>Peerオブジェクトは、Peerコネクションを生成、受信する為に利用します。</p>
+      <pre>var peer = new Peer({key: 'APIKEY'});</pre>
+      <p>Peerのコンストラクタに渡す'APIKEY'は、SkyWayのAPIキーです。<a
+      href="http://nttcom.github.io/skypeer-website/registration.html">APIキーの申し込み</a>を行うことで無料で取得することができます。APIキー申込時には利用ドメインを申請していただきます。APIキーは申請したドメインからのみ利用可能です。</p>
+
+      <p>PeerJSのセッション情報交換やシグナリングに利用するサーバを、自身で構築することもできます。
+          詳しくは<a href="http://github.com/peers/peerjs-server">peerjs-server</a>をご覧ください。</p>
+      <p>これで利用するための準備はすべて整いました！</p>
+
+      <h2>使い方</h2>
+      <p>Peerオブジェクトは生成時、ランダムなID（以下、PeerID）が付与されます。</p>
+      <pre>peer.on('open', function(id) {
+  console.log('My peer ID is: ' + id);
+});</pre>
+      <p>他のPeerと接続したい場合は、接続先のPeerIDが必要になります。
+      RestAPIを利用して接続先のPeerIDを入手するか、何らかの仕組みでPeerIDを交換してください。<a href="#peer"><code>Peer</code> constructor</a>のオプションに自身のPeerIDを指定すると、この処理を省略することができます。</p>
+
+      <p>その他の<a href="#peer-options">オプション</a>、メソッド、<a href="#peeron">イベント</a>、<a href="#peeron-error">エラー処理</a>などの詳細は、<a href="#peer">Peer API リファレンス</a>をお読みください。</p>
+
+      <h3>Data connections</h3>
+      <p>相手のPeerIDを指定して<code>peer.connect</code>を実行するとData connectionを開始します。相手から接続要求はいつでも<code>connection</code> イベントを利用して受け取ることができます。 </p>
+      <div class="two-col">
+        <div class="col col-header">接続開始</div>
+        <div class="col col-header">接続イベントの受信</div>
+        <div class="col"><pre>var conn = peer.connect('dest-peer-id');</pre></div>
+        <div class="col"><pre>peer.on('connection', function(conn) { ... });</pre></div>
+        <div class="clear"></div>
+      </div>
+      <p><code>peer.connect</code>と<code>connection</code>イベントのコールバックでは<code>DataConnection</code>オブジェクトを提供します。このオブジェクトを使用してデータの送受信を行うことができます。</p>
+      <pre>conn.on('open', function() {
+  // メッセージを受信
+  conn.on('data', function(data) {
+    console.log('Received', data);
+  });
+
+  // メッセージを送信
+  conn.send('Hello!');
+});</pre>
+      <p>メソッドとイベントの詳細は、<a href="#dataconnection">DataConnection API リファレンス</a>をご覧ください。</p>
+      <h3>Video/audio calls</h3>
+      <p>相手のPeerIDを指定して<code>peer.call</code>を実行することで、その相手を呼び出すことができます。相手があなたを呼び出した場合、 <code>call</code>イベントが発生します。
+      <p><code>call</code>イベントを受信した時は、必ずそのイベントに応答する必要があります。応答しなければ接続は確立しません。</p>
+      <div class="two-col">
+        <div class="col col-header">呼び出し開始</div>
+        <div class="col col-header">呼び出しへの応答</div>
+        <div class="col"><pre>// Call a peer, providing our mediaStream
+var call = peer.call('dest-peer-id',
+  mediaStream);
+
+</pre></div>
+        <div class="col"><pre>peer.on('call', function(call) {
+  // Answer the call, providing our mediaStream
+  call.answer(mediaStream);
+});</pre></div>
+        <div class="clear"></div>
+      </div>
+      <p>相手を呼び出す時、または、呼び出しに応答する時には、MediaStreamを提供する必要があります。
+      MediaStreamにはビデオストリーム（ウェブカメラの映像）やオーディオストリームなどがあり、<a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia"><code>navigator.getUserMedia</code></a>によって取得することができます。取得できる内容はブラウザによってことなります。
+      尚、呼び出しに応答する時のMediaStreamは必須ではありません。もし応答時にMediaStreamをセットしなければ、一方向の通話が確立されます。
+      通話が確立されると、<code>open</code>プロパティにtrueがセットされます。
+      <p><code>peer.call</code> と <code>call</code> イベントのコールバックではMediaConnectionオブジェクトを提供します。
+      MediaConnectionオブジェクトは<code>stream</code> イベントをキャッチすることができます。<code>stream</code>イベントのコールバックには相手の映像／音声ストリームが含まれます。</p>
+      <pre>call.on('stream', function(stream) {
+  // `stream` is the MediaStream of the remote peer.
+  // Here you'd add it to an HTML video/canvas element.
+});</pre>
+      <p>詳しくは <a href="#mediaconnection">MediaConnection API reference</a> をご覧ください。</p>
+
+      <h2>SkyWay WebAPIの使い方</h2>
+      <h3>/active/list/<APIKEY></h3>
+      <p>APIキー毎のアクティブなPeerIDを取得します。<p>
+      <pre>
+  Request : https://skyway.io/active/count/APIキー
+  Response : [peerid1,peerid2,peerid3,peerid4,.....]</pre>
+      <h3>/active/counts/<APIKEY></h3>
+      <p>APIキー毎のアクティブなPeerIDの数を取得します。<p>
+      <pre>
+  Request : https://skyway.io/active/list/APIKEY
+  Response : {"name":"active_session","count":0,"api_key":"APIKEY"}</pre>
+
+      <p>SkyWay WebAPIはAPIキー申請時に申請していただいたドメインからのみアクセスが可能です。</p>
+
+      <h2>FAQ</h2>
+
+        <h3>どのような種類のデータを送ることができますか？</h3>
+
+        <p>PeerJSは <a href="https://github.com/binaryjs/js-binarypack">BinaryPack</a>シリアライゼーションフォーマットを利用しています。JSONやバイナリBlobs、ArrayBuffersなど様々なデータを簡単な手順で送受信することができます。</p>
+          <pre>
+conn.send({
+  strings: 'hi!',
+  numbers: 150,
+  arrays: [1,2,3],
+  evenBinary: new Blob([1,2,3]),
+  andMore: {bool: true}
+});</pre>
+
+        <h3>PeerJSを利用することができないシーンはありますか？</h3>
+
+          <p>シンメトリックNATの内側にいるクライアント同士はNATを超えることができないため、通信することができません。
+              ただし、TURNサーバを利用して接続を中継すれば回避することができます。TURNサーバは提供していないため必要であれば別途用意してください。
+              TURNサーバの情報は、<code>Peer</code>オブジェクトのオプションで指定することができます。</p>
+        <h3>TURNサーバはどのようにして利用するのでしょうか？</h3>
+        <p>Peerオブジェクトを生成する際、オプションのiceServersにURL等の情報を設定してください。</p>
+<pre>
+var peer = new Peer({
+  config: {'iceServers': [
+    { url: 'stun:stun.skyway.io:3478' },
+    { url: 'turn:homeo@turn.bistri.com:80', credential: 'homeo' }
+  ]} /* Sample servers, please use appropriate ones */
+});
+</pre>
+        <h3>現在のブラウザ対応状況は?</h3>
+
+        　<p>WebRTC仕様との互換性並びにブラウザの対応状況は<a href="http://peerjs.com/status">こちら</a>をご覧ください。尚、SkyWay対応版のPeerJSについては、動作に差異がある可能性があります。</p>
+
+        <h3>接続しようとしてるピアに接続できない場合はどうなりますか？</h3>
+
+          <p>ピアに接続できない場合はPeerServerにて接続要求を5秒間保持します。ピアが一時的に再接続するような場合、コネクションを切らずに保持することができます。尚、SkyWayは現時点ではこの機能に対応していません。</p>
+
+        <h3>ピアとつながらない場合は何を確認するべきでしょうか？</h3>
+          <p>ピア同士がシンメトリックNATの内側にいる可能性があります。この場合はTURNサーバを利用してください。</p>
+          <p>ファイアウォール等でUDPのポート3478（STUNサーバへの問い合わせに必要）をブロックしているかもしれません。STUNサーバへの問い合わせが可能な状況でご利用ください。</p>
+
+        <h3>遅延／帯域幅は?</h3>
+          <p>ピア同士のデータのやり取りはサーバを経由しないため、それが原因となる遅延などは発生しません。ピア同士の処理性能やネットワーク環境に依存します。</p>
+          <p>ピア同士のコネクション確立に関する遅延は、セッション情報の中継（以下、シグナリング）とユーザの識別という2つに分類できます。PeerJSでは、シグナリングの時間を短縮するために、XHRストリーミングリクエストでデータを送った後、WebSocketで送ります。ユーザの識別に関しては手動でIDを指定することで、サーバ側にてIDを生成する際のRTT（Round-Trip delay Time）を短縮することができます。尚、SkyWayに関してはXHRでの接続に現時点では対応していません。</p>
+        <h3>その他</h3>
+          <p><a href="https://groups.google.com/forum/?fromgroups#!forum/peerjs">PeerJS Google Group(英語のみ)</a></p>
+      <h3>免責事項</h3>
+      <p>本ドキュメントは<a href="http://peerjs.com/docs/">http://peerjs.com/docs/</a>を元に、NTTコミュニケーションズが提供するSkyWayを利用するための情報等を追記し公開しています。ドキュメント原本に関する個別問い合わせには応じることができませんので、予めご了承ください。</p>
+
+  </section>
+
+  <header class="left">
+    <h2>API Reference<a class="hide icon">&laquo;</a><a class="show icon">&raquo;</a></h2>
+  </header>
+  <header class="right">
+    <h2>Getting Started</h2>
+  </header>
+
+  <section class="api">
+    {{{html}}}
+  </section>
+
+</body>
