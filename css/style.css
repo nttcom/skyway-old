@@ -972,6 +972,12 @@ h3.policyH3 {
 
 table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 
+/* APIKEY */
+
+#apikey {
+    text-align: center;
+}
+
 
 /* Tablet */
 @media screen and (max-width: 862px) {
