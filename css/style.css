@@ -482,7 +482,7 @@ a.btnM:active {
     padding: 0px;
 }
 
-.btnS li.btnGotodemo,
+
 .btnG {
     background: url(../images/btnS.png) right 8px center no-repeat #369dde;
     color: #fff;
@@ -493,35 +493,69 @@ a.btnM:active {
     margin-right: 10px;
 }
 
-.btnS li.btnGotodemo:hover,
+.btnS li {
+width:40%;
+    display: inline-block;
+}
+
+
+.btnS li.btnGotodemo a {
+    background: url(../images/btnS.png) right 8px center no-repeat #369dde;
+    color: #fff;
+	display:block;
+    border-radius: 5px;
+    padding: 10px 23px 10px 10px;
+    font-size: 12px;
+    margin-right: 10px;
+	margin-bottom:8px;
+	overflow:hidden;
+	
+}
+
+.btnS li.btnGotodemo a:hover,
 .btnG:hover {
     background: url(../images/btnS.png) right 8px center no-repeat #44aff3;
 
 }
 
-.btnS li.btnGotodemo:active,
+.btnS li.btnGotodemo a:active,
 .btnG:active {
     background: url(../images/btnS.png) right 8px center no-repeat #2282bf;
     box-shadow: 0 1px 0 inset #095f95;
 }
 
-.btnS li.btnGotocode,
+
 .btnB {
     background: url(../images/btnS.png) right 8px center no-repeat #0ec159;
     color: #fff;
     border-radius: 5px;
-
+	display:block;
     padding: 10px 23px 10px 10px;
     font-size: 12px;
     display: inline-block;
 }
 
-.btnS li.btnGotocode:hover,
+
+
+.btnS li.btnGotocode a{
+    background: url(../images/btnS.png) right 8px center no-repeat #0ec159;
+    color: #fff;
+	display:block;
+    border-radius: 5px;
+    padding: 10px 23px 10px 10px;
+    font-size: 12px;
+    margin-right: 10px;
+	margin-bottom:8px;
+	overflow:hidden;
+    
+}
+
+.btnS li.btnGotocode a:hover,
 .btnB:hover {
     background: url(../images/btnS.png) right 8px center no-repeat #18d768;
 }
 
-.btnS li.btnGotocode:active,
+.btnS li.btnGotocode a:active,
 .btnB:active {
     background: url(../images/btnS.png) right 8px center no-repeat #05a949;
     box-shadow: 0 1px 0 inset #018e3c;
@@ -1061,7 +1095,9 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
         width: 100%;
         margin: 5px 0;
     }
-
+    #nav-home {
+        display: none;
+    }
     .navigation {
         width: 100%;
         float: left;
@@ -1073,7 +1109,7 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     .navigation li {
         float: left;
         width: auto;
-        padding: 0 7px;
+        padding: 0 0;
         font-size: 13px;
 
     }
@@ -1093,6 +1129,11 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
         margin-bottom: 40px;
 
     }
+	
+	.demoP {
+   
+    height:auto;
+}
 
     #slide1 h1 {
         line-height: 1em;
@@ -1132,16 +1173,33 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     }
 
     a.btnL {
-        background: url(../images/btnL.png) right 12px center no-repeat #01b169;
-        overflow: hidden;
-        margin: 0 auto;
+        background: url(../images/btnL.png) right 1０px center no-repeat #01b169;
+       
+        margin: 0 ;
         color: #fff;
         border-radius: 5px;
-        padding: 10px 34px 10px 15px;
-        font-size: 14px;
-        font-weight: 700;
+        padding: 10px 34px 10px 10px;
+        font-size: 13px;
+		display:block;
         text-align: center;
     }
+	
+	.btnS li.btnGotodemo {
+	  
+    display: block;
+    margin-right: 0px;
+
+	width:90%;
+}
+
+
+.btnS li.btnGotocode {
+    
+    display: block;
+    margin-right: 0px;
+
+	width:90%;
+}
 
 }
 
