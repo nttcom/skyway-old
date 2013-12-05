@@ -36,14 +36,14 @@ $(function(){
 		}
 		
 		
-		*/
-		
-		if(y > box3Pos.top  || y < box3Pos.top){
+
+
+		if(y > box3Pos.top){
 			$("#footer").css('background-position','50% ' + (y-box3Pos.top)*3 +'px'); 
 		}else{
 			$("#footer").css('background-position','50% top');			
 		}
-		
+		*/
 		
 		
 		
