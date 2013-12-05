@@ -45,15 +45,21 @@ p {
     margin-top: 10px;
     float: left;
 }
-
-#nav {
-    text-align: right;
-    margin: 10px 0 0 0;
-    float: left;
-	
+header.menu > .container {
+    position: relative;
 }
-
+#nav {
+    position: absolute;
+    text-align: right;
+    float: left;
+    left: 70px;
+    bottom: 6px;
+}
 .tagline {
+    position: absolute;
+    left: 64px;
+    top: 18px;
+
     padding: 0px;
     text-align: left;
     font-size: 11px;
@@ -98,13 +104,21 @@ p {
 }
 
 .socialWrap {
+    position: absolute;
+    text-align: right;
+    float: left;
+    right: 0px;
+    bottom: 0px;
+/*
     padding-top: 8px;
     padding-right: 70px;
+*/
 }
-
+.socialWrap .twitter-share-button {
+    margin-right: -32px;
+}
 .socialWrap p {
     line-height: 36px;
-
     display: inline-block;
 
 }
@@ -529,7 +543,6 @@ width:40%;
     background: url(../images/btnS.png) right 8px center no-repeat #0ec159;
     color: #fff;
     border-radius: 5px;
-	display:block;
     padding: 10px 23px 10px 10px;
     font-size: 12px;
     display: inline-block;
@@ -612,7 +625,7 @@ h1.formH1 {
     text-align: center;
     padding-top: 90px;
     margin-bottom: 40px;
-    font-weight: nomal;
+    font-weight: normal;
     background: url(../images/slide2H1.png) center top no-repeat;
 }
 
@@ -695,7 +708,7 @@ h1.laboH1 {
     text-align: center;
     padding-top: 90px;
     margin-bottom: 40px;
-    font-weight: nomal;
+    font-weight: normal;
     background: url(../images/laboH1.png) center top no-repeat;
 }
 
@@ -706,7 +719,7 @@ h1.pastH1 {
     text-align: center;
     padding-top: 90px;
     margin-bottom: 40px;
-    font-weight: nomal;
+    font-weight: normal;
     background: url(../images/pastH1.png) center top no-repeat;
 }
 
@@ -717,7 +730,7 @@ h1.mailH1 {
     text-align: center;
     padding-top: 90px;
     margin-bottom: 40px;
-    font-weight: nomal;
+    font-weight: normal;
     background: url(../images/mailH1.png) center top no-repeat;
 }
 
@@ -799,7 +812,7 @@ h2.titleG {
 .bx-wrapper .bx-pager {
     text-align: center;
     font-size: .85em;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-weight: bold;
     color: #666;
     padding-top: 20px;
@@ -926,7 +939,7 @@ h2.titleG {
 
 .bx-wrapper .bx-caption span {
     color: #fff;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     display: block;
     font-size: .85em;
     padding: 10px;
@@ -1179,8 +1192,7 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     }
 
     a.btnL {
-        background: url(../images/btnL.png) right 1０px center no-repeat #01b169;
-       
+        background: url(../images/btnL.png) right 10px center no-repeat #01b169;
         margin: 0 ;
         color: #fff;
         border-radius: 5px;
