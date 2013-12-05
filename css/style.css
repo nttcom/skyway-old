@@ -108,11 +108,7 @@ header.menu > .container {
     text-align: right;
     float: left;
     right: 0px;
-    bottom: 0px;
-/*
-    padding-top: 8px;
-    padding-right: 70px;
-*/
+    bottom: 12px;
 }
 .socialWrap .twitter-share-button {
     margin-right: -32px;
@@ -425,6 +421,10 @@ tt, code, pre {
 .footerSocial {
     margin: 45px auto 0 auto;
     list-style: none;
+}
+
+.footerSocial .twitter-share-button {
+    margin-right: -32px;
 }
 
 .footerSocial li {
@@ -993,10 +993,10 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 
 
 /* Tablet */
-@media screen and (max-width: 862px) {
+@media screen and (max-width: 768px) {
 
     .socialWrap {
-
+        display: none;
         padding-right: 0px;
     }
 
@@ -1011,17 +1011,6 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 
         padding: 0px;
     }
-
-    #nav {
-        width: 100%;
-
-        margin: 10px 0;
-    }
-
-}
-
-/* Tablet */
-@media screen and (max-width: 768px) {
     .forkme {
         display: none;
     }
@@ -1110,18 +1099,25 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
         display: none;
     }
 
-    #nav {
-        width: 100%;
-        margin: 5px 0;
+    header.menu > .container {
+        height: 110px;
     }
+
+    #nav {
+        float: none;
+        left: 50%;
+        bottom: 0px;
+        margin-left: -130px;
+    }
+
     #nav-home {
         display: none;
     }
     .navigation {
-        width: 100%;
+        width: 260px;
         float: left;
         list-style: none;
-        margin: 0;
+        margin: 10px auto;
         padding: 0;
     }
 
@@ -1132,7 +1128,13 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
         font-size: 13px;
 
     }
-
+    .footerSocial li {
+        display: block;
+    }
+    .footerSocial li.github-btn {
+        margin-left: 30px;
+    }
+    
     .slide {
         background-attachment: fixed;
         width: 100%;
