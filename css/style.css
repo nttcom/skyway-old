@@ -108,7 +108,7 @@ header.menu > .container {
     text-align: right;
     float: left;
     right: 0px;
-    bottom: 0px;
+    bottom: 12px;
 }
 .socialWrap .twitter-share-button {
     margin-right: -32px;
@@ -993,10 +993,10 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 
 
 /* Tablet */
-@media screen and (max-width: 862px) {
+@media screen and (max-width: 768px) {
 
     .socialWrap {
-
+        display: none;
         padding-right: 0px;
     }
 
@@ -1011,17 +1011,6 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 
         padding: 0px;
     }
-
-    #nav {
-        width: 100%;
-
-        margin: 10px 0;
-    }
-
-}
-
-/* Tablet */
-@media screen and (max-width: 768px) {
     .forkme {
         display: none;
     }
@@ -1111,19 +1100,21 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     }
 
     header.menu > .container {
-/*        height: 100px; */
+        height: 110px;
     }
+
     #nav {
-        position: static;
-        margin: 10px auto;
-        width: 260px;
         float: none;
+        left: 50%;
+        bottom: 0px;
+        margin-left: -130px;
     }
+
     #nav-home {
         display: none;
     }
     .navigation {
-        width: 100%;
+        width: 260px;
         float: left;
         list-style: none;
         margin: 10px auto;
