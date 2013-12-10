@@ -19,8 +19,8 @@ enableCanonical: true
                         <dt>連絡先メールアドレス</dt>
                         <p class="formP">APIキーをお送りするメールアドレスを正確に入力してください。</p>
                         <dd><input type="email" name="email" value="" size="40" class="" placeholder="" required></dd>
-                        <dt>SkyWayを利用するドメイン（５つまで申請可能）</dt>
-                        <p class="formP">SkyWayを利用するドメイン名(FQDN)を正確に入力してください。</p>
+                        <dt>SkyWayを利用するドメイン</dt>
+                        <p class="formP">SkyWayを利用したWebアプリケーションを設置するWebサーバのドメイン名(FQDN)を入力してください。Webアプリケーションは、SkyWayのAPIに対して<a href="https://developer.mozilla.org/ja/docs/HTTP_access_control">CORS</a>を使ったクロスドメイン通信を行います。SkyWayのAPIは、この欄に入力されたドメインからの要求のみを許可します。5つまで申請可能です。</p>
                         <dd><input type="text" name="domain1" value="" size="40" class="" placeholder="（例）skyway.io"
                                    required>
                             <input type="text" name="domain2" value="" size="40" class="" placeholder="※任意入力">
@@ -31,6 +31,10 @@ enableCanonical: true
                     <p class=""><a href="policy.html" target="_blank">利用規約の確認</a></p>
                     <input type="submit" value="利用規約に同意して申し込み" class="btnM">
                 </form>
+                <p>SSLとXMLHttpRequest2により、暗号化されて安全に送信されます。<br/>
+                    <!--[if lte IE 9]>Internet Explorer 9以下には非対応です。<br/>
+                    WebRTC対応ブラウザ(ChromeまたはFirefox)をお使いください。<![endif]-->
+                </p>
             </div>
         </div>
     </div>
