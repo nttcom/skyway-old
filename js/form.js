@@ -14,6 +14,7 @@ $(document).ready(function(){
             url: $form.attr('action'),
             type: $form.attr('method'),
             data: $form.serialize(),
+            dataType: 'text',
             timeout: 10000,
 
             beforeSend: function(xhr, settings) {
