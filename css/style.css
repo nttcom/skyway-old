@@ -25,7 +25,7 @@ a:hover {
     text-decoration: none;
 }
 
-p {
+p,ol {
     font-size: 13px;
 }
 
@@ -42,7 +42,7 @@ p {
 
 #logo {
     width: 65px;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     float: left;
 }
 header.menu > .container {
@@ -158,13 +158,11 @@ header.menu > .container {
     background-position: 0% 0px;
     background-image: url(../images/topBackground.jpg);
     background-color: #33abf1;
-
     background-attachment: fixed;
 
 }
 
-#slide1 h1 {
-    font-size: 22pt;
+#slide1 p.topImg {
     line-height: 0;
     color: #C00;
     font-weight: normal;
@@ -185,9 +183,9 @@ header.menu > .container {
 
 }
 
-#slide1 h2.catchcopy {
+#slide1 h3.catchcopy {
     color: #009f29;
-    font-size: 34px;
+    font-size: 28px;
     text-align: center;
 
 }
@@ -198,7 +196,7 @@ header.menu > .container {
     padding: 0 4.5%;
 }
 
-.pointWrap h3 {
+.pointWrap h4 {
 /*    opacity: 0; */
     margin-left: -30px
 }
@@ -211,7 +209,7 @@ header.menu > .container {
     padding-left: 37px;
     background: url(../images/multiDevice.png) center left no-repeat;
     color: #009f29;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -219,7 +217,7 @@ header.menu > .container {
     padding-left: 37px;
     background: url(../images/multimedia.png) center left no-repeat;
     color: #009f29;
-    font-size: 17px;
+   font-size: 18px;
     font-weight: bold;
 }
 
@@ -227,7 +225,7 @@ header.menu > .container {
     padding-left: 37px;
     background: url(../images/noInstallation.png) center left no-repeat;
     color: #009f29;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -235,7 +233,7 @@ header.menu > .container {
     padding-left: 37px;
     background: url(../images/realTime.png) center left no-repeat;
     color: #009f29;
-    font-size: 17px;
+   font-size: 18px;
     font-weight: bold;
 }
 
@@ -262,9 +260,9 @@ h3 {
     color: #000;
 }
 
-#slide2 h1 {
+#slide2 h3 {
 /*    opacity: 0.05; */
-    font-size: 22pt;
+    font-size: 28px;
     color: #000;
     text-align: center;
     font-weight: normal;
@@ -272,13 +270,6 @@ h3 {
     background: url(../images/slide3H1.png) center top no-repeat;
 }
 
-#slide2 h2 {
-    font-size: 2em;
-    color: #333;
-    line-height: 0px;
-    padding-bottom: 20px;
-    font-weight: 400;
-}
 
 .samplecode {
     overflow: hidden;
@@ -292,7 +283,7 @@ h3 {
 
 tt, code, pre {
     font-family: Consolas, "Liberation Mono", Courier, monospace;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .highlight pre, .markdown-body pre {
@@ -344,9 +335,9 @@ tt, code, pre {
     background-color: #f8f8f8;
 }
 
-#slide3 h1 {
+#slide3 h3 {
 /*    opacity: 0.05; */
-    font-size: 20pt;
+    font-size: 28px;
     color: #000;
     font-weight: normal;
     text-align: center;
@@ -354,20 +345,9 @@ tt, code, pre {
     background: url(../images/slide4H1.png) center top no-repeat;
 }
 
-#slide3 h2 {
-    font-size: 2em;
-    padding-bottom: 20px;
-    font-weight: 400;
-}
 
-#slide3 h2 {
-    font-size: 18pt;
-    padding-bottom: 20px;
-    font-weight: 700;
-}
-
-#slide3 h3 {
-    font-size: 1.3em;
+#slide3 h4 {
+    font-size: 20px;
     color: #8a8683;
     line-height: 1.1;
     padding-bottom: 20px;
@@ -409,7 +389,7 @@ tt, code, pre {
 
 .footer nav ul li {
     display: inline-block;
-    font-size: 11px;
+    font-size: 13px;
     padding: 0 20px;
 }
 
@@ -430,7 +410,7 @@ tt, code, pre {
 .footerSocial li {
     display: inline-block;
     padding: 0 10px 0 0;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .nttcom {
@@ -438,7 +418,7 @@ tt, code, pre {
 }
 
 .copy {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 a.btnL {
@@ -475,7 +455,8 @@ a.btnM {
     /*box-shadow:0 4px 0  #008951;*/
     padding: 5px 30px 5px 10px;
     text-align: center;
-    margin-right: 5px;
+    margin: 5px 5px 20px 0;
+	display:inline-block;
 }
 
 a.btnM:hover {
@@ -489,7 +470,7 @@ a.btnM:active {
 
 }
 
-.btnS {
+.btnS ,.btnS2 {
     list-style-type: none;
     margin: 0 auto;
     text-align: center;
@@ -502,7 +483,7 @@ a.btnM:active {
     color: #fff;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
-    font-size: 12px;
+    font-size: 13px;
     display: inline-block;
     margin-right: 10px;
 }
@@ -512,6 +493,9 @@ width:40%;
     display: inline-block;
 }
 
+.btnS2 li {
+    display: inline-block;
+}
 
 .btnS li.btnGotodemo a {
     background: url(../images/btnS.png) right 8px center no-repeat #369dde;
@@ -519,7 +503,7 @@ width:40%;
 	display:block;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
-    font-size: 12px;
+    font-size: 13px;
     margin-right: 10px;
 	margin-bottom:8px;
 	overflow:hidden;
@@ -544,9 +528,10 @@ width:40%;
     color: #fff;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
-    font-size: 12px;
+    font-size: 13px;
     display: inline-block;
 }
+
 
 
 
@@ -556,7 +541,7 @@ width:40%;
 	display:block;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
-    font-size: 12px;
+    font-size: 13px;
     margin-right: 10px;
 	margin-bottom:8px;
 	overflow:hidden;
@@ -586,6 +571,50 @@ width:40%;
     color: #fff;
 
 }
+
+
+a.btnB2 {
+    background: url(../images/btnS.png) right 8px center no-repeat #0ec159;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 23px 10px 10px;
+    font-size: 13px;
+    display: inline-block;
+}
+
+a.btnB:hover {
+    background: url(../images/btnS.png) right 8px center no-repeat #18d768;
+}
+
+a.btnB:active {
+    background: url(../images/btnS.png) right 8px center no-repeat #05a949;
+    box-shadow: 0 1px 0 inset #018e3c;
+}
+
+
+
+a..btnG2 {
+    background: url(../images/btnS.png) right 8px center no-repeat #369dde;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 23px 10px 10px;
+    font-size: 13px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a.btnG2:hover {
+    background: url(../images/btnS.png) right 8px center no-repeat #44aff3;
+
+}
+
+a.btnG2:active {
+    background: url(../images/btnS.png) right 8px center no-repeat #2282bf;
+    box-shadow: 0 1px 0 inset #095f95;
+}
+
+
+
 
 .demoP {
     margin-bottom: 30px;
@@ -618,7 +647,7 @@ width:40%;
     background: #f8f8f8;
 }
 
-h1.formH1 {
+h3.formH3 {
     font-size: 20pt;
 
     color: #000;
@@ -646,7 +675,7 @@ dl.formDL {
 }
 
 dl.formDL dt {
-    font-size: 1.3em;
+    font-size: 20px;
 color: #8a8683;
 line-height: 1.1;
 font-weight: 400;
@@ -663,8 +692,9 @@ dl.formDL dd {
 
 dl.formDL dd input {
     width: 100%;
-    padding: 8px 0px;
+    padding: 10px;
     border: 1px solid #ccc;
+	margin-bottom:10px;
 
 }
 
@@ -701,8 +731,8 @@ dl.formDL dd input {
 
 }
 
-h1.laboH1 {
-    font-size: 20pt;
+h3.laboH3 {
+    font-size: 28px;
 
     color: #000;
     text-align: center;
@@ -712,8 +742,8 @@ h1.laboH1 {
     background: url(../images/laboH1.png) center top no-repeat;
 }
 
-h1.pastH1 {
-    font-size: 20pt;
+h3.pastH3 {
+    font-size: 28px;
 
     color: #000;
     text-align: center;
@@ -723,8 +753,8 @@ h1.pastH1 {
     background: url(../images/pastH1.png) center top no-repeat;
 }
 
-h1.mailH1 {
-    font-size: 20pt;
+h3.mailH3 {
+    font-size: 28px;
 
     color: #000;
     text-align: center;
@@ -734,7 +764,7 @@ h1.mailH1 {
     background: url(../images/mailH1.png) center top no-repeat;
 }
 
-h2.titleG {
+h4.titleG {
     color: #009f29;
     font-size: 18px;
     font-weight: bold;
@@ -785,6 +815,7 @@ h2.titleG {
 
     left: -5px;
     background: #fff;
+	min-height:470px;
 }
 
 .bx-wrapper .bx-pager,
@@ -811,7 +842,6 @@ h2.titleG {
 
 .bx-wrapper .bx-pager {
     text-align: center;
-    font-size: .85em;
     font-family: Arial, sans-serif;
     font-weight: bold;
     color: #666;
@@ -941,7 +971,6 @@ h2.titleG {
     color: #fff;
     font-family: Arial, sans-serif;
     display: block;
-    font-size: .85em;
     padding: 10px;
 }
 
@@ -966,19 +995,19 @@ h2.titleG {
 }
 
 h1.policyH1 {
-    font-size: 20pt;
+    font-size: 28px;
     color:#000;
     text-align:center;
 }
 
 h2.policyH2 {
-    font-size: 15pt;
+    font-size: 20px;
     color:#000;
     text-align:left;
 }
 
 h3.policyH3 {
-    font-size: 12pt;
+    font-size: 13pt;
     color:#000;
     text-align:left;
 }
@@ -990,6 +1019,145 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 #apikey {
     text-align: center;
 }
+
+
+
+
+
+
+
+/* Left will inherit from right (so we don't need to duplicate code */
+.github-fork-ribbon {
+  /* The right and left lasses determine the side we attach our banner to */
+  position: absolute;
+
+  /* Add a bit of padding to give some substance outside the "stitching" */
+  padding: 2px 0;
+
+  /* Set the base colour */
+  background-color: #a00;
+
+  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
+
+  /* Add a drop shadow */
+  -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+
+  z-index: 100000;
+}
+
+.github-fork-ribbon a {
+  /* Set the font */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+
+  /* Set the text properties */
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0,0,0,0.5);
+  text-align: center;
+
+  /* Set the geometry. If you fiddle with these you'll also need to tweak the top and right values in #github-fork-ribbon. */
+  width: 200px;
+  line-height: 20px;
+
+  /* Set the layout properties */
+  display: inline-block;
+  padding: 2px 0;
+
+  /* Add "stitching" effect */
+  border-width: 1px 0;
+  border-style: dotted;
+  border-color: rgba(255,255,255,0.7);
+}
+
+.github-fork-ribbon-wrapper {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+}
+
+
+
+.github-fork-ribbon-wrapper.right {
+  right: 0;
+}
+
+
+.github-fork-ribbon-wrapper.right-bottom {
+  position: fixed;
+  top: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+.github-fork-ribbon-wrapper.right .github-fork-ribbon {
+  top: 42px;
+  right: -43px;
+
+  /* Rotate the banner 45 degrees */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.github-fork-ribbon-wrapper.left .github-fork-ribbon {
+  top: 42px;
+  left: -43px;
+
+  /* Rotate the banner -45 degrees */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+.github-fork-ribbon-wrapper.left-bottom .github-fork-ribbon {
+  top: 80px;
+  left: -43px;
+
+  /* Rotate the banner -45 degrees */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.github-fork-ribbon-wrapper.right-bottom .github-fork-ribbon {
+  top: 80px;
+  right: -43px;
+
+  /* Rotate the banner -45 degrees */
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Tablet */
@@ -1011,7 +1179,8 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 
         padding: 0px;
     }
-    .forkme {
+    .forkme,
+	.github-fork-ribbon-wrapper {
         display: none;
     }
 
@@ -1086,7 +1255,7 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
         color: #fff;
         border-radius: 5px;
         padding: 10px 34px 10px 15px;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 700;
         text-align: center;
     }
@@ -1156,40 +1325,34 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     height:auto;
 }
 
-    #slide1 h1 {
+    #slide1 h3 {
         line-height: 1em;
     }
 
-    #slide1 h2 {
+    #slide1 h4 {
         line-height: 1em;
     }
 
-    #slide2 h1 {
+    #slide2 h3 {
         line-height: 1em;
     }
 
-    #slide2 h2 {
-        line-height: 1em;
-    }
-
-    #slide3 h1 {
-        line-height: 1em;
-    }
-
-    #slide3 h2 {
-        line-height: 1em;
-    }
-
-    #slide4 h1 {
-        line-height: 1em;
-    }
-
-    #slide4 h2 {
+    #slide2 h4 {
         line-height: 1em;
     }
 
     #slide3 h3 {
-        font-size: 1.2em;
+        line-height: 1em;
+    }
+
+    #slide3 h4 {
+        line-height: 1em;
+    }
+
+
+    #slide3 h4 {
+        font-size: 18px;
+		line-height: 1em;
 
     }
 
