@@ -453,7 +453,7 @@ a.btnM {
     color: #fff;
     border-radius: 5px;
     /*box-shadow:0 4px 0  #008951;*/
-    padding: 5px 30px 5px 10px;
+    padding: 10px 30px 10px 10px;
     text-align: center;
     margin: 5px 5px 20px 0;
 	display:inline-block;
@@ -470,7 +470,7 @@ a.btnM:active {
 
 }
 
-.btnS ,.btnS2 {
+.btnS,.btnS2 {
     list-style-type: none;
     margin: 0 auto;
     text-align: center;
@@ -503,7 +503,7 @@ width:40%;
 	display:block;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
-    font-size: 13px;
+    font-size: 12px;
     margin-right: 10px;
 	margin-bottom:8px;
 	overflow:hidden;
@@ -541,7 +541,7 @@ width:40%;
 	display:block;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
-    font-size: 13px;
+    font-size: 12px;
     margin-right: 10px;
 	margin-bottom:8px;
 	overflow:hidden;
@@ -593,7 +593,7 @@ a.btnB:active {
 
 
 
-a..btnG2 {
+a.btnG2 {
     background: url(../images/btnS.png) right 8px center no-repeat #369dde;
     color: #fff;
     border-radius: 5px;
@@ -697,7 +697,6 @@ dl.formDL dd input {
 	margin-bottom:10px;
 
 }
-
 .form input:valid, .form input :in-range {
     background-color: #b0e2ff;
 }
@@ -707,18 +706,9 @@ dl.formDL dd input {
 }
 
 .form input[type="submit"] {
-
     background: url(../images/btnM.png) right 10px center no-repeat #01b169;
-    overflow: hidden;
-    margin: 0 auto;
-    color: #fff;
-    border-radius: 5px;
-    /*box-shadow:0 4px 0  #008951;*/
-    padding: 5px 30px 5px 10px;
-    text-align: center;
-    margin-right: 5px;
-
 }
+
 
 .form input[type="submit"]:hover {
     background: url(../images/btnM.png) right 10px center no-repeat #01bc6f;
