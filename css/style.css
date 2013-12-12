@@ -699,6 +699,9 @@ dl.formDL dd input {
 	margin-bottom:10px;
 
 }
+.form input[type="text"] {
+    line-height: 1.5em;
+}
 .form input:valid, .form input :in-range {
     background-color: #b0e2ff;
 }
@@ -1027,7 +1030,7 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
   padding: 2px 0;
 
   /* Set the base colour */
-  background-color: #a00;
+  background-color: #121621;
 
   /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)));
@@ -1051,6 +1054,7 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
   font-size: 13px;
   font-weight: 700;
   color: white;
+  pointer-events: auto;
 
   /* Set the text properties */
   text-decoration: none;
@@ -1076,6 +1080,7 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
   height: 150px;
   position: absolute;
   overflow: hidden;
+  pointer-events: none;
   top: 0;
 }
 
