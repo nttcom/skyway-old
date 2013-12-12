@@ -700,8 +700,8 @@ dl.formDL dd input {
 	margin-bottom:10px;
 
 }
-.form input[type="text"] {
-    line-height: 1.5em;
+.form input[type="text"], .form input[type="email"] {
+    line-height: 1.2em;
 }
 .form input:valid, .form input :in-range {
     background-color: #b0e2ff;
