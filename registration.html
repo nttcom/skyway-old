@@ -30,10 +30,18 @@ enableCanonical: true
                             <input type="text" name="domain5" size="40"></dd>
                     </dl>
                     <p class=""><a href="policy.html" target="_blank">利用規約の確認</a></p>
+
+                    <!--[if gte IE 10]><!-->
                     <input type="submit" value="利用規約に同意して申し込み" class="btnM">
+                    <!--<![endif]-->
+
+                    <!--[if lte IE 9]>
+                    <input type="submit" value="利用規約に同意して申し込み" class="btnM" disabled>
+                    <![endif]-->
                 </form>
-                <p>SSLとXMLHttpRequest2により、暗号化されて安全に送信されます。<br/>
-                    <!--[if lte IE 9]>Internet Explorer 9以下には非対応です。<br/>
+                <p>
+                    <!--[if gte IE 10]><!-->SSLとXMLHttpRequest2により、暗号化されて安全に送信されます。<br/><!--<![endif]-->
+                    <!--[if lte IE 9]>Internet Explorer 9以下では申し込むことができません。<br/>
                     WebRTC対応ブラウザ(ChromeまたはFirefox)をお使いください。<![endif]-->
                 </p>
             </div>

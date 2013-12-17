@@ -425,7 +425,9 @@ tt, code, pre {
 }
 
 a.btnL {
-    background: url(../images/btnL.png) right 15px center no-repeat #01b169;
+    background: url(../images/btnL.png) #01b169 no-repeat;
+    background-position: right center;
+    background-position: right 15px center;
     overflow: hidden;
     margin: 0 auto;
     color: #fff;
@@ -438,21 +440,21 @@ a.btnL {
 }
 
 a.btnL:hover {
-    background: url(../images/btnL.png) right 15px center no-repeat #01bc6f;
+    background-color: #01bc6f;
 
 }
 
 a.btnL:active {
-    background: url(../images/btnL.png) right 15px center no-repeat #009c5c;
+    background-color: #009c5c;
     box-shadow: 0 1px 0 inset #008951;
 
 }
 
-.btnM,
-a.btnM {
-    background: url(../images/btnM.png) right 10px center no-repeat #01b169;
+.btnM, a.btnM {
+    background: url(../images/btnM.png) no-repeat #01b169;
+    background-position: right center;
+    background-position: right 10px center;
     overflow: hidden;
-    margin: 0 auto;
     color: #fff;
     border-radius: 5px;
     /*box-shadow:0 4px 0  #008951;*/
@@ -463,26 +465,27 @@ a.btnM {
 }
 
 a.btnM:hover {
-    background: url(../images/btnM.png) right 10px center no-repeat #01bc6f;
+    background-color: #01bc6f;
 
 }
 
 a.btnM:active {
-    background: url(../images/btnM.png) right 10px center no-repeat #009c5c;
+    background-color: #009c5c;
     box-shadow: 0 1px 0 inset #008951;
 
 }
 
-.btnS,.btnS2 {
+.btnS, .btnS2 {
     list-style-type: none;
     margin: 0 auto;
     text-align: center;
     padding: 0px;
 }
 
-
 .btnG {
-    background: url(../images/btnS.png) right 8px center no-repeat #369dde;
+    background: url(../images/btnS.png) no-repeat #369dde;
+    background-position: right center;
+    background-position: right 8px center;
     color: #fff;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
@@ -501,7 +504,9 @@ width:40%;
 }
 
 .btnS li.btnGotodemo a {
-    background: url(../images/btnS.png) right 8px center no-repeat #369dde;
+    background: url(../images/btnS.png) no-repeat #369dde;
+    background-position: right center;
+    background-position: right 8px center;
     color: #fff;
 	display:block;
     border-radius: 5px;
@@ -515,19 +520,20 @@ width:40%;
 
 .btnS li.btnGotodemo a:hover,
 .btnG:hover {
-    background: url(../images/btnS.png) right 8px center no-repeat #44aff3;
+    background-color: #44aff3;
 
 }
 
 .btnS li.btnGotodemo a:active,
 .btnG:active {
-    background: url(../images/btnS.png) right 8px center no-repeat #2282bf;
+    background-color: #2282bf;
     box-shadow: 0 1px 0 inset #095f95;
 }
 
-
 .btnB {
-    background: url(../images/btnS.png) right 8px center no-repeat #0ec159;
+    background: url(../images/btnS.png) no-repeat #0ec159;
+    background-position: right center;
+    background-position: right 8px center;
     color: #fff;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
@@ -535,11 +541,10 @@ width:40%;
     display: inline-block;
 }
 
-
-
-
 .btnS li.btnGotocode a{
-    background: url(../images/btnS.png) right 8px center no-repeat #0ec159;
+    background: url(../images/btnS.png) no-repeat #0ec159;
+    background-position: right center;
+    background-position: right 8px center;
     color: #fff;
 	display:block;
     border-radius: 5px;
@@ -548,17 +553,16 @@ width:40%;
     margin-right: 10px;
 	margin-bottom:8px;
 	overflow:hidden;
-    
 }
 
 .btnS li.btnGotocode a:hover,
 .btnB:hover {
-    background: url(../images/btnS.png) right 8px center no-repeat #18d768;
+    background-color: #18d768;
 }
 
 .btnS li.btnGotocode a:active,
 .btnB:active {
-    background: url(../images/btnS.png) right 8px center no-repeat #05a949;
+    background-color: #05a949;
     box-shadow: 0 1px 0 inset #018e3c;
 }
 
@@ -577,7 +581,9 @@ width:40%;
 
 
 a.btnB2 {
-    background: url(../images/btnS.png) right 8px center no-repeat #0ec159;
+    background: url(../images/btnS.png) no-repeat #0ec159;
+    background-position: right center;
+    background-position: right 8px center;
     color: #fff;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
@@ -586,18 +592,18 @@ a.btnB2 {
 }
 
 a.btnB:hover {
-    background: url(../images/btnS.png) right 8px center no-repeat #18d768;
+    background-color: #18d768;
 }
 
 a.btnB:active {
-    background: url(../images/btnS.png) right 8px center no-repeat #05a949;
+    background-color: #05a949;
     box-shadow: 0 1px 0 inset #018e3c;
 }
 
-
-
 a.btnG2 {
-    background: url(../images/btnS.png) right 8px center no-repeat #369dde;
+    background: url(../images/btnS.png) no-repeat #369dde;
+    background-position: right center;
+    background-position: right 8px center;
     color: #fff;
     border-radius: 5px;
     padding: 10px 23px 10px 10px;
@@ -607,17 +613,13 @@ a.btnG2 {
 }
 
 a.btnG2:hover {
-    background: url(../images/btnS.png) right 8px center no-repeat #44aff3;
-
+    background-color: #44aff3;
 }
 
 a.btnG2:active {
-    background: url(../images/btnS.png) right 8px center no-repeat #2282bf;
+    background-color: #2282bf;
     box-shadow: 0 1px 0 inset #095f95;
 }
-
-
-
 
 .demoP {
     margin-bottom: 30px;
@@ -712,19 +714,18 @@ dl.formDL dd input {
 }
 
 .form input[type="submit"] {
-    background: url(../images/btnM.png) right 10px center no-repeat #01b169;
+    background: url(../images/btnM.png) no-repeat #01b169;
+    background-position: right center;
+    background-position: right 10px center;
 }
 
-
 .form input[type="submit"]:hover {
-    background: url(../images/btnM.png) right 10px center no-repeat #01bc6f;
-
+    background-color: #01bc6f;
 }
 
 .form input[type="submit"]:active {
-    background: url(../images/btnM.png) right 10px center no-repeat #009c5c;
+    background-color: #009c5c;
     box-shadow: 0 1px 0 inset #008951;
-
 }
 
 h3.laboH3 {
@@ -1247,7 +1248,9 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     }
 
     a.btnL {
-        background: url(../images/btnL.png) right 12px center no-repeat #01b169;
+        background: url(../images/btnL.png) no-repeat #01b169;
+        background-position: right center;
+        background-position: right 12px center;
         overflow: hidden;
         margin: 0 auto;
         color: #fff;
@@ -1351,7 +1354,9 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     }
 
     a.btnL {
-        background: url(../images/btnL.png) right 10px center no-repeat #01b169;
+        background: url(../images/btnL.png) no-repeat #01b169;
+        background-position: right center;
+        background-position: right 10px center;
         margin: 0 ;
         color: #fff;
         border-radius: 5px;
@@ -1363,22 +1368,18 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
 	
 	.btnS li.btnGotodemo {
 	  
-    display: block;
-    margin-right: 0px;
+        display: block;
+        margin-right: 0px;
 
-	width:90%;
+        width:90%;
+    }
+
+    .btnS li.btnGotocode {
+
+        display: block;
+        margin-right: 0px;
+
+        width:90%;
+    }
+
 }
-
-
-.btnS li.btnGotocode {
-    
-    display: block;
-    margin-right: 0px;
-
-	width:90%;
-}
-
-}
-
-
-
