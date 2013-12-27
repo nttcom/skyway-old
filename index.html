@@ -74,15 +74,16 @@ enableCanonical: true
             class="nx">Peer</span><span class="p">(</span><span class="nx">myId</span><span class="p">,</span> <span
             class="p">{</span><span class="nx">key</span><span class="o">:</span> <span
             class="s1">'yourApiKey'</span><span class="p">});</span>
-<span class="kd">var</span> <span class="nx">conn</span> <span class="o">=</span> <span class="nx">peer</span><span
+<span class="nx">peer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span
+            class="p">,</span> <span class="kd">function</span><span class="p">(id)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">conn</span> <span class="o">=</span> <span class="nx">peer</span><span
             class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'anotherId'</span><span
             class="p">);</span>
-<span class="nx">conn</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span
+    <span class="nx">conn</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span
             class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">conn</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span
-            class="nx">prompt</span><span class="p">(</span><span class="s1">'Input message'</span><span
-            class="p">));</span>
-<span class="p">});</span>
+        <span class="nx">conn</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">)};</span>
 <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 </pre>
