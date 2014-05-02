@@ -1,0 +1,189 @@
+---
+layout: default_en
+title: SkyWay - WebRTCを簡単＆柔軟に使えるプラットフォーム
+description: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。
+ogDescription: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。
+enableCanonical: true
+---
+{% include assign_relative_path.html %}
+<!-- section1 -->
+<section class="slide slidetop" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+    <div class="container clearfix">
+
+        <div id="content1" class="grid_12  tar">
+            <p class="topImg"><img src="{{ relative_path }}images/topImg.png" alt="SkyWay"></p>
+
+            <div class="catch topBox">
+                <h2 class="catchcopy">A Simple and Flexible WebRTC Platform</h2>
+
+                <p class="read">
+                    WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術です。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。</p>
+
+                <div class="pointWrap">
+                    <h3 class="realTime">リアルタイム</h3>
+
+                    <p>リアルタイムにデータを送受信できます。ネットゲームやファイル転送ソフトに活用できます。</p>
+                </div>
+                <div class="pointWrap">
+                    <h3 class="multiDevice">マルチデバイス&amp;ブラウザ</h3>
+
+                    <p>PCでもスマートフォンでも、WebRTC対応ブラウザ<sup>※</sup>さえあれば、共通のコードが動作します。<br><small>※2013年12月現在、Chrome(iOSを除く)およびFirefoxが対応</small></p>
+                </div>
+                <div class="pointWrap">
+                    <h3 class="multimedia">マルチメディア</h3
+>
+
+                    <p>映像と音声を送受信でき、カメラやマイクも利用できます。ビデオチャットなどを簡単に作ることができます。</p>
+                </div>
+                <div class="pointWrap">
+                  <h3 class="noInstallation">インストールなし</h3>
+                    <p>ブラウザでURLにアクセスするだけで使えます。アプリのインストール作業は一切不要です。</p>
+                </div>
+                <p class="tac"><a href="registration.html" class="btnL">今すぐAPIキーを申し込む (無料)</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /section1 -->
+
+
+<!-- section2 -->
+<section class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+    <div class="container clearfix">
+
+        <div id="content2" class="grid_12">
+            <h2>使ってみよう</h2>
+
+            <div class="grid_12 samplecode">
+
+                <p class="tac read">SkyWayは<a href="https://github.com/peers/peerjs-server"
+                                              target="_blank">PeerServer</a>互換のWebAPIと<a
+                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a>の一部を改変したJavaScriptライブラリを提供しています。
+                </p>
+                <ol>
+                    <li>SkyWayのWebAPIを利用するため、APIキーを申し込みます。<br><a class="btnM" href="registration.html">APIキーを申し込む
+                        (無料)</a>
+                    </li>
+
+                    <li>ライブラリをインクルードし、JavaScriptコードを書きましょう。
+
+                        <div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">src=</span><span
+        class="s">"https://skyway.io/dist/0.3/peer.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">peer</span> <span class="o">=</span> <span class="k">new</span> <span
+            class="nx">Peer</span><span class="p">(</span><span class="nx">myId</span><span class="p">,</span> <span
+            class="p">{</span><span class="nx">key</span><span class="o">:</span> <span
+            class="s1">'yourApiKey'</span><span class="p">});</span>
+<span class="nx">peer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span
+            class="p">,</span> <span class="kd">function</span><span class="p">(id)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">conn</span> <span class="o">=</span> <span class="nx">peer</span><span
+            class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'anotherId'</span><span
+            class="p">);</span>
+    <span class="nx">conn</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span
+            class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">conn</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">)};</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre>
+                        </div>
+
+                        <a class="btnM" href="docs/#start">詳しくはスタートガイドへ</a><a class="btnM" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">質問や情報交換はこちらへ</a>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section2 -->
+
+
+<!-- section3 -->
+<section class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+    <div class="container clearfix">
+        <div id="content" class="grid_12">
+            <h2>関連サービス・デモ</h2>
+
+            <div class="demo">
+                <article class="grid_4 demoBox"><a href="https://chat.skyway.io" target="_blank"><img
+                        src="{{ relative_path }}images/webrtcchat.png"></a>
+
+                    <h3>WebRTC Chat on SkyWay</h3>
+
+                    <p class="demoP">NTTコミュニケーションズが提供する、SkyWayを活用したインストールやユーザ登録なしの無料ビデオ・ボイスチャットサービス。</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="https://chat.skyway.io" target="_blank">利用する</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="grid_4  demoBox omega">
+                    <a href="https://skyway.io/examples/caption-phone" target="_blank"><img
+                            src="{{ relative_path }}images/caption_phone_chat.png"></a>
+
+                    <h3>字幕付きボイスチャット</h3>
+
+                    <p class="demoP">会話の内容を自動で認識して、テキストチャットのように吹き出しで表示する機能がついたボイスチャット。</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="https://skyway.io/examples/caption-phone"
+                                                   target="_blank">デモを見る</a></li>
+                        <li class="btnGotocode"><a
+                                href="https://github.com/nttcom/peerjs/tree/master/skyway_examples/caption-phone"
+                                target="_blank">コードを見る</a></li>
+                    </ul>
+                </article>
+                <article class="grid_4 demoBox"><a href="http://cdn.peerjs.com/demo/videochat" target="_blank"><img
+                        src="{{ relative_path }}images/videochat.png"></a>
+
+                    <h3>シンプルなビデオチャット</h3>
+
+                    <p class="demoP">相手のIDを入力してして接続する、シンプルなビデオチャット。(<a href="http://peerjs.com/"
+                                                                       target="_blank">PeerJS</a>提供)</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="http://cdn.peerjs.com/demo/videochat" target="_blank">デモを見る</a>
+                        </li>
+                        <li class="btnGotocode"><a
+                                href="https://github.com/nttcom/peerjs/tree/master/examples/videochat" target="_blank">コードを見る</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="grid_4 demoBox"><a href="http://cdn.peerjs.com/demo/chat.html" target="_blank"><img
+                        src="{{ relative_path }}images/chat.png"></a>
+
+                    <h3>ファイル転送付きチャット</h3>
+
+                    <p class="demoP">相手のIDを入力して接続する、テキストチャット。ドラッグ＆ドロップでファイル転送ができる。(<a href="http://peerjs.com/"
+                                                                                      target="_blank">PeerJS</a>提供)</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="http://cdn.peerjs.com/demo/chat.html" target="_blank">デモを見る</a>
+                        </li>
+                        <li class="btnGotocode"><a href="https://github.com/nttcom/peerjs/tree/master/examples"
+                                                   target="_blank">コードを見る</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /section3 -->
+
+<script type="text/javascript" src="{{ relative_path }}js/parallax.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/scripts.js"></script>
+
+<!-- bxSlider Javascript file -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.demo').bxSlider({
+            slideWidth: 302,
+            minSlides: 2,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideMargin: 20
+        });
+    });
+</script>
