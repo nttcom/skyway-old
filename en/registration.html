@@ -1,0 +1,55 @@
+---
+layout: default_en
+title: APIキーの申し込み - SkyWay - WebRTCを簡単＆柔軟に使えるプラットフォーム
+description: 簡単＆柔軟なWebRTCプラットフォーム「SkyWay」のAPIキーを申し込むことができます。
+ogDescription: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。
+enableCanonical: true
+---
+{% include assign_relative_path.html %}
+<section class="no-slide">
+    <div class="container clearfix">
+        <div id="content" class="grid_12 formWrap">
+            <div class="formBox">
+                <h3 class="formH3">APIキーの申し込み (無料)</h3>
+
+                <form action="https://skyway.io/mail/" method="post" class="form" id="regist">
+                    <dl class="formDL">
+                        <dt>お名前</dt>
+                        <p class="formP">個人のお名前をフルネームで入力してください。ハンドルネームはご遠慮ください。</p>
+                        <dd><input type="text" name="name" value="" size="40" placeholder="" required></dd>
+                        <dt>連絡先メールアドレス</dt>
+                        <p class="formP">APIキーをお送りするメールアドレスを正確に入力してください。</p>
+                        <dd><input type="email" name="email" value="" size="40" class="" placeholder="" required></dd>
+                        <dt>SkyWayを利用するドメイン</dt>
+                        <p class="formP">
+                            お客さまのアプリケーションを設置するWebサーバのドメイン名(FQDN)を入力してください。5つまで申請可能です。</p>
+                        <dd><input type="text" name="domain1" value="" size="40" class="" placeholder="例) yourdomain.com"
+                                   required>
+                            <input type="text" name="domain2" size="40" placeholder="例) www.yourdomain.com">
+                            <input type="text" name="domain3" size="40" placeholder="例) skyway.yourdomain.com">
+                            <input type="text" name="domain4" size="40" placeholder="例) yourhost.local">
+                            <input type="text" name="domain5" size="40"></dd>
+                    </dl>
+                    <p class=""><a href="policy.html" target="_blank">利用規約の確認</a></p>
+
+                    <!--[if gte IE 10]><!-->
+                    <input type="submit" value="利用規約に同意して申し込み" class="btnM">
+                    <!--<![endif]-->
+
+                    <!--[if lte IE 9]>
+                    <input type="submit" value="利用規約に同意して申し込み" class="btnM" disabled>
+                    <![endif]-->
+                </form>
+                <p>
+                    <!--[if gte IE 10]><!-->SSLとXMLHttpRequest2により、暗号化されて安全に送信されます。<br/><!--<![endif]-->
+                    <!--[if lte IE 9]>Internet Explorer 9以下では申し込むことができません。<br/>
+                    WebRTC対応ブラウザ(ChromeまたはFirefox)をお使いください。<![endif]-->
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="{{ relative_path }}js/scripts.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/form.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/xdr.js"></script>
