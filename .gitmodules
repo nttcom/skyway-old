@@ -1,3 +1,6 @@
 [submodule "docs"]
 	path = docs
 	url = https://github.com/nttcom/skyway-docs.git
+[submodule "en/docs"]
+	path = en/docs
+	url = https://github.com/nttcom/skyway-docs-en.git

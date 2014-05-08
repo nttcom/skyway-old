@@ -1,0 +1,189 @@
+---
+layout: default_en
+title: SkyWay - A Simple and Flexible WebRTC Platform
+description: WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps using just JavaScript without having to worry about the server.
+ogDescription: WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps using just JavaScript without having to worry about the server.
+enableCanonical: true
+---
+{% include assign_relative_path.html %}
+<!-- section1 -->
+<section class="slide slidetop" id="slide1" data-slide="1" data-stellar-background-ratio="0.5">
+    <div class="container clearfix">
+
+        <div id="content1" class="grid_12  tar">
+            <p class="topImg"><img src="{{ relative_path }}images/topImg.png" alt="SkyWay"></p>
+
+            <div class="catch topBox">
+                <h2 class="catchcopy">A Simple and Flexible WebRTC Platform</h2>
+
+                <p class="read">
+                    WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps using just JavaScript without having to worry about the server.</p>
+
+                <div class="pointWrap">
+                    <h3 class="realTime">Real time</h3>
+
+                    <p>Send data in real time. It can be used in online games or file transfer software.</p>
+                </div>
+                <div class="pointWrap">
+                    <h3 class="multiDevice">Multidevice &amp; browser</h3>
+
+                    <p>Use the same code to run it on any WebRTC compatible browser*, regardless of whether it's on a PC or smart phone.<br><small>*Currently supported on Chrome(excluding iOS)and Firefox</small></p>
+                </div>
+                <div class="pointWrap">
+                    <h3 class="multimedia">Multimedia</h3
+>
+
+                    <p>You can send and receive video and audio from any compatible camera or microphone connected. You can make things like video chat apps easily.</p>
+                </div>
+                <div class="pointWrap">
+                  <h3 class="noInstallation">No installation needed</h3>
+                    <p>Just access the URL in your browser to start. There's no need for any complicated installation.</p>
+                </div>
+                <p class="tac"><a href="registration.html" class="btnL">Apply for an API key now (free)</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /section1 -->
+
+
+<!-- section2 -->
+<section class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="0.5">
+    <div class="container clearfix">
+
+        <div id="content2" class="grid_12">
+            <h2>Using SkyWay</h2>
+
+            <div class="grid_12 samplecode">
+
+                <p class="tac read">SkyWay provides a <a href="https://github.com/peers/peerjs-server"
+                                              target="_blank">PeerServer</a> compatible Web API and a modified <a
+                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a> JavaScript library.
+                </p>
+                <ol>
+                    <li>Apply for an API key to use the SkyWay WebAPI <br><a class="btnM" href="registration.html">Apply for an API Key
+                        (free)</a>
+                    </li>
+
+                    <li>Include the library and write the JavaScript code.
+
+                        <div class="highlight">
+<pre><span class="nt">&lt;script </span><span class="na">src=</span><span
+        class="s">"https://skyway.io/dist/0.3/peer.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">var</span> <span class="nx">peer</span> <span class="o">=</span> <span class="k">new</span> <span
+            class="nx">Peer</span><span class="p">(</span><span class="nx">myId</span><span class="p">,</span> <span
+            class="p">{</span><span class="nx">key</span><span class="o">:</span> <span
+            class="s1">'yourApiKey'</span><span class="p">});</span>
+<span class="nx">peer</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span
+            class="p">,</span> <span class="kd">function</span><span class="p">(id)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">conn</span> <span class="o">=</span> <span class="nx">peer</span><span
+            class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="s1">'anotherId'</span><span
+            class="p">);</span>
+    <span class="nx">conn</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'open'</span><span
+            class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">conn</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">'hello world'</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">)};</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</pre>
+                        </div>
+
+                        <a class="btnM" href="docs/#start">Read the start guide for more details</a><a class="btnM" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">Ask questions here</a>
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section2 -->
+
+
+<!-- section3 -->
+<section class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0.5">
+    <div class="container clearfix">
+        <div id="content" class="grid_12">
+            <h2>Related services and demos</h2>
+
+            <div class="demo">
+                <article class="grid_4 demoBox"><a href="https://chat.skyway.io" target="_blank"><img
+                        src="{{ relative_path }}images/webrtcchat.png"></a>
+
+                    <h3>WebRTC Chat on SkyWay</h3>
+
+                    <p class="demoP">A free video and voice chat service built using SkyWay provided by NTT Communications. It requires no installation and no registration.</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="https://chat.skyway.io" target="_blank">Try it now</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="grid_4  demoBox omega">
+                    <a href="https://skyway.io/examples/caption-phone" target="_blank"><img
+                            src="{{ relative_path }}images/caption_phone_chat.png"></a>
+
+                    <h3>Caption phone</h3>
+
+                    <p class="demoP">A voice chat service that uses speech recognition to automatically display what you are saying.</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="https://skyway.io/examples/caption-phone"
+                                                   target="_blank">View demo</a></li>
+                        <li class="btnGotocode"><a
+                                href="https://github.com/nttcom/peerjs/tree/master/skyway_examples/caption-phone"
+                                target="_blank">View source</a></li>
+                    </ul>
+                </article>
+                <article class="grid_4 demoBox"><a href="http://cdn.peerjs.com/demo/videochat" target="_blank"><img
+                        src="{{ relative_path }}images/videochat.png"></a>
+
+                    <h3>Simple Video Chat</h3>
+
+                    <p class="demoP">Connect to your peer by inputting their ID. A simple video chat program.(Provided by <a href="http://peerjs.com/"
+                                                                       target="_blank">PeerJS</a>)</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="http://cdn.peerjs.com/demo/videochat" target="_blank">View demo</a>
+                        </li>
+                        <li class="btnGotocode"><a
+                                href="https://github.com/nttcom/peerjs/tree/master/examples/videochat" target="_blank">View source</a>
+                        </li>
+                    </ul>
+                </article>
+                <article class="grid_4 demoBox"><a href="http://cdn.peerjs.com/demo/chat.html" target="_blank"><img
+                        src="{{ relative_path }}images/chat.png"></a>
+
+                    <h3>Text Chat with File Transfer</h3>
+
+                    <p class="demoP">Connect to your peer by inputting their ID. You can send messages or drag and drop to send a file.(Provided by <a href="http://peerjs.com/"
+                                                                                      target="_blank">PeerJS</a>)</p>
+                    <ul class="btnS">
+                        <li class="btnGotodemo"><a href="http://cdn.peerjs.com/demo/chat.html" target="_blank">View demo</a>
+                        </li>
+                        <li class="btnGotocode"><a href="https://github.com/nttcom/peerjs/tree/master/examples"
+                                                   target="_blank">View source</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /section3 -->
+
+<script type="text/javascript" src="{{ relative_path }}js/parallax.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{{ relative_path }}js/scripts.js"></script>
+
+<!-- bxSlider Javascript file -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.demo').bxSlider({
+            slideWidth: 302,
+            minSlides: 2,
+            maxSlides: 3,
+            moveSlides: 1,
+            slideMargin: 20
+        });
+    });
+</script>

@@ -1,0 +1,20 @@
+{% comment %} 変数 relative_path にサイトのトップレベルへの相対パスをセットする {% endcomment %}
+{% if post %}
+    {% assign _paths = post.url | split: '/' %}
+{% else %}
+    {% assign _paths = page.url | split: '/' %}
+{% endif %}
+{% for _path in _paths %}
+    {% if forloop.last %}
+        {% assign _level = forloop.index %}
+    {% endif %}
+{% endfor %}
+{% if _level == 2 %}
+    {% assign relative_path = '' %}
+{% elsif _level == 3 %}
+    {% assign relative_path = '../' %}
+{% elsif _level == 4 %}
+    {% assign relative_path = '../../' %}
+{% elsif _level == 5 %}
+    {% assign relative_path = '../../../' %}
+{% endif %}
