@@ -1280,7 +1280,7 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
         margin-left: -130px;
     }
 
-    #nav-home {
+    .nav-home {
         display: none;
     }
     .navigation {
