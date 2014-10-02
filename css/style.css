@@ -108,7 +108,7 @@ header.menu > .container {
     text-align: right;
     float: left;
     right: 0px;
-    bottom: 12px;
+    bottom: 20px;
 }
 .socialWrap .twitter-share-button {
     margin-right: -32px;
@@ -129,6 +129,10 @@ header.menu > .container {
     float: left;
     padding: 0 10px 0 0;
     font-size: 14px;
+}
+
+.fb_iframe_widget span {
+    vertical-align: inherit !important;
 }
 
 .fr {
