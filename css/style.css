@@ -280,10 +280,7 @@ h3 {
     text-align: center;
 }
 
-.grid_news {
-    margin: 0 2% 1% 0;
-    float: left;
-    display: block;
+.newsbody {
     padding-bottom: 10px;
     border-bottom: 1px solid #CECECE;
 }
