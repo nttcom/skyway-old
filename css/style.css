@@ -108,7 +108,7 @@ header.menu > .container {
     text-align: right;
     float: left;
     right: 0px;
-    bottom: 12px;
+    bottom: 20px;
 }
 .socialWrap .twitter-share-button {
     margin-right: -32px;
@@ -129,6 +129,10 @@ header.menu > .container {
     float: left;
     padding: 0 10px 0 0;
     font-size: 14px;
+}
+
+.fb_iframe_widget span {
+    vertical-align: inherit !important;
 }
 
 .fr {
@@ -251,6 +255,34 @@ h3 {
     font-size: 14px;
     border-bottom: 1px solid #fff;
     padding-bottom: 20px;
+}
+
+/* Slide News */
+
+#slide_news {
+
+    background-color: #f8f8f8;
+    color: #000;
+}
+
+#slide_news h2 {
+    /*    opacity: 0.05; */
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 90px;
+    background: url(../images/pastH1.png) center top no-repeat;
+    margin: 1em 0;
+}
+
+.datepositon {
+    text-align: center;
+}
+
+.newsbody {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CECECE;
 }
 
 /* Slide 2 */
@@ -1203,6 +1235,10 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
         width: 100%;
     }
 
+    #content_news {
+        width: 100%;
+    }
+
     #slide1 h1 {
         line-height: 1em;
     }
@@ -1234,6 +1270,11 @@ table.policyTable, td.policyTd, th.policyTh { border: 2px #808080 solid; }
     #slide4 h2 {
         line-height: 1em;
     }
+
+    #slide_news h2 {
+        line-height: 1em;
+    }
+
 
     #slide1 h2.catchcopy {
 
