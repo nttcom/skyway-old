@@ -1,8 +1,8 @@
 ---
 layout: default
 title: SkyWay - WebRTCを簡単＆柔軟に使えるプラットフォーム
-description: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。
-ogDescription: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。
+description: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。iOS/Androidアプリ用の開発キットを利用すれば、iOS/Android用アプリの開発もできます。
+ogDescription: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。iOS/Androidアプリ用の開発キットを利用すれば、iOS/Android用アプリの開発もできます。
 enableCanonical: true
 ---
 <!-- section1 -->
@@ -16,7 +16,7 @@ enableCanonical: true
                 <h2 class="catchcopy">A Simple and Flexible WebRTC Platform</h2>
 
                 <p class="read">
-                    WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術です。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。</p>
+                    WebRTCは、ブラウザや専用アプリ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術です。SkyWayを使えば、サーバを準備することなく簡単に、ブラウザ/iOS/Android向けのWebRTCを使ったアプリが開発できます。</p>
 
                 <div class="pointWrap">
                     <h3 class="realTime">リアルタイム</h3>
@@ -26,7 +26,7 @@ enableCanonical: true
                 <div class="pointWrap">
                     <h3 class="multiDevice">マルチデバイス&amp;ブラウザ</h3>
 
-                    <p>PCでもスマートフォンでも、WebRTC対応ブラウザ<sup>※</sup>さえあれば、共通のコードが動作します。<br><small>※2013年12月現在、Chrome(iOSを除く)およびFirefoxが対応</small></p>
+                    <p>PCでもスマートフォンでも、WebRTC対応ブラウザ<sup>※</sup>さえあれば、共通のコードが動作します。スマートフォンのネイティブアプリにも組み込む事ができます。<br><small>※2013年12月現在、Chrome(iOSを除く)およびFirefoxが対応</small></p>
                 </div>
                 <div class="pointWrap">
                     <h3 class="multimedia">マルチメディア</h3>
@@ -35,7 +35,7 @@ enableCanonical: true
                 </div>
                 <div class="pointWrap">
                   <h3 class="noInstallation">インストールなし</h3>
-                    <p>ブラウザでURLにアクセスするだけで使えます。アプリのインストール作業は一切不要です。</p>
+                    <p>ブラウザの場合は、URLにアクセスするだけで使えます。アプリのインストール作業は一切不要<sup>※</sup>です。<br></p>
                 </div>
                 <p class="tac"><a href="https://skyway.io/ds/registration/" class="btnL" disabled>今すぐ開発者登録を行う (無料)</a></p>
             </div>
@@ -50,9 +50,10 @@ enableCanonical: true
     <div class="container clearfix">
         <div id="content_news" class="grid_12">
             <h2>News</h2>
-                <div class="grid_3 datepositon">2015.06.01</div>
+                <div class="grid_3 datepositon">2015.06.05</div>
                 <div class="grid_9 omega newsbody">
-                    本日、14:50〜18:50までの間、サーバメンテナンスの影響でTURNサーバが利用できない状態でした。ご迷惑をお掛けし申し訳ありませんでした。<BR>
+                    iOS/Androidアプリ用の開発キット「SkyWay iOS/Android SDK」を提供開始しました。<BR>詳しくは<a href="">ニュースリリース</a>をご覧ください。<BR>
+                    詳しい利用法については<a href="docs/">ドキュメント</a>をご覧ください。<BR>
                 </div>
                 <div class="grid_3 datepositon">2015.01.27</div>
                 <div class="grid_9 omega newsbody">
@@ -81,14 +82,16 @@ enableCanonical: true
             <div class="grid_12 samplecode">
 
                 <p class="tac read">SkyWayは<a href="https://github.com/peers/peerjs-server"
-                                              target="_blank">PeerServer</a>互換のWebAPIと<a
-                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a>の一部を改変したJavaScriptライブラリを提供しています。
+                                              target="_blank">PeerServer</a>互換のWebAPIと、<a
+                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a>の一部を改変した<a href="https://github.com/nttcom/" target="_blank">JavaScriptライブラリ</a>、<a href="" target="_blank">iOS用SDK</a>、<a href="" target="_blank">Android用SDK</a>を提供しています。
                 </p>
                 <ol>
                     <li>SkyWayのWebAPIを利用するため、開発者登録を行いAPIキーを申し込みます。<br><a class="btnM" href="https://skyway.io/ds/registration/">今すぐ開発者登録を行う (無料)</a>
                     </li>
 
-                    <li>ライブラリをインクルードし、JavaScriptコードを書きましょう。
+                    <li><p>SkyWayを利用してアプリケーションを開発しましょう。</p>
+                        <p>2-1. JavaScriptライブラリをご利用の方</p>
+                        ライブラリをインクルードし、JavaScriptコードを書きましょう。
 
                         <div class="highlight">
 <pre><span class="nt">&lt;script </span><span class="na">src=</span><span
@@ -112,11 +115,27 @@ enableCanonical: true
 </pre>
                         </div>
 
-                        <a class="btnM" href="docs/#start">詳しくはスタートガイドへ</a><a class="btnM" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">質問や情報交換はこちらへ</a>
+                        <p>2-2. iOS用SDKをご利用の方</p>
+                        SDKをダウンロードし、システムライブラリとフレームワークをあなたのアプリケーションに追加してください。<BR>
+                        <a class="btnG" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">iOS SDKをダウンロード（無料）</a><a class="btnG" href="docs/#iOS">iOS版サンプルアプリ</a><BR>
+
+                        <p>2-3. Android用SDKをご利用の方</p>
+                        SDKをダウンロードし、SkyWay.aarをあなたのアプリケーションに追加後にライブラリをインクルードしてください。<BR>
+                        <a class="btnG" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">Android SDKをダウンロード（無料）</a><a class="btnG" href="docs/#Android">Android版サンプルアプリ</a><BR>
+
+                        <p>※JavaScriptライブラリとiOS/Android用SDKの間でWebRTCによる通信をこなう場合は、必ず、<a href="" target="_blank">こちらの注意事項</a>をご確認下さい。</p>
+
+                    </li>
+                    <li>開発に必要な情報を収集しましょう。</p>
+                        <a class="btnM" href="docs">スタートガイドを見る</a><a class="btnM" href="https://skyway.io/ds/turnrequest">質問や開発者同士の情報交換はこちらへ</a><BR>
+
+
                     </li>
                     <li>SkyWayのオプションサービスを活用しましょう。<BR>
                     <a class="btnM" href="https://skyway.io/ds/turnrequest">TURNサーバ利用希望の方はこちらへ</a>
                     </li>
+
+
                 </ol>
             </div>
         </div>
