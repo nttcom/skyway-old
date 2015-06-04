@@ -514,16 +514,18 @@ a.btnM:active {
     padding: 0px;
 }
 
-.btnG {
+a.btnG {
     background: url(../images/btnS.png) no-repeat #369dde;
     background-position: right center;
     background-position: right 8px center;
+    overflow: hidden;
     color: #fff;
     border-radius: 5px;
-    padding: 10px 23px 10px 10px;
-    font-size: 13px;
-    display: inline-block;
-    margin-right: 10px;
+    /*box-shadow:0 4px 0  #008951;*/
+    padding: 10px 30px 10px 10px;
+    text-align: center;
+    margin: 5px 5px 5px 0;
+	display:inline-block;
 }
 
 .btnS li {
