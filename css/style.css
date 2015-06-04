@@ -29,6 +29,10 @@ p,ol {
     font-size: 13px;
 }
 
+p.underline {
+    text-decoration: underline;
+}
+
 /* Navigation */
 
 .menu {
