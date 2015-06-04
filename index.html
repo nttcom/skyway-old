@@ -1,8 +1,8 @@
 ---
 layout: default
 title: SkyWay - WebRTCを簡単＆柔軟に使えるプラットフォーム
-description: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。iOS/Androidアプリ用の開発キットを利用すれば、iOS/Android用アプリの開発もできます。
-ogDescription: WebRTCは、ブラウザ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術。SkyWayを使えば、サーバを準備することなく、簡単なJavaScriptを書くだけで、WebRTCを使ったアプリが開発できます。iOS/Androidアプリ用の開発キットを利用すれば、iOS/Android用アプリの開発もできます。
+description: WebRTCは、ブラウザや専用アプリ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術です。SkyWayを使えば、サーバを準備することなく簡単に、WebRTCを使ったアプリが開発できます。
+ogDescription: WebRTCは、ブラウザや専用アプリ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術です。SkyWayを使えば、サーバを準備することなく簡単に、WebRTCを使ったアプリが開発できます。
 enableCanonical: true
 ---
 <!-- section1 -->
@@ -16,7 +16,7 @@ enableCanonical: true
                 <h2 class="catchcopy">A Simple and Flexible WebRTC Platform</h2>
 
                 <p class="read">
-                    WebRTCは、ブラウザや専用アプリ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術です。SkyWayを使えば、サーバを準備することなく簡単に、ブラウザ/iOS/Android向けのWebRTCを使ったアプリが開発できます。</p>
+                    WebRTCは、ブラウザや専用アプリ同士でリアルタイムに映像、音声、データを送受信できる画期的な新技術です。SkyWayを使えば、サーバを準備することなく簡単に、WebRTCを使ったアプリが開発できます。</p>
 
                 <div class="pointWrap">
                     <h3 class="realTime">リアルタイム</h3>
@@ -52,8 +52,8 @@ enableCanonical: true
             <h2>News</h2>
                 <div class="grid_3 datepositon">2015.06.05</div>
                 <div class="grid_9 omega newsbody">
-                    iOS/Androidアプリ用の開発キット「SkyWay iOS/Android SDK」を提供開始しました。<BR>詳しくは<a href="">ニュースリリース</a>をご覧ください。<BR>
-                    詳しい利用法については<a href="docs/">ドキュメント</a>をご覧ください。<BR>
+                    SkyWay iOS/Android SDKを提供開始しました。<BR>詳しくは<a href="">ニュースリリース</a>をご覧ください。<BR>
+                    利用法については<a href="docs/">ドキュメント</a>をご覧ください。<BR>
                 </div>
                 <div class="grid_3 datepositon">2015.01.27</div>
                 <div class="grid_9 omega newsbody">
@@ -83,15 +83,15 @@ enableCanonical: true
 
                 <p class="tac read">SkyWayは<a href="https://github.com/peers/peerjs-server"
                                               target="_blank">PeerServer</a>互換のWebAPIと、<a
-                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a>の一部を改変した<a href="https://github.com/nttcom/" target="_blank">JavaScriptライブラリ</a>、<a href="" target="_blank">iOS用SDK</a>、<a href="" target="_blank">Android用SDK</a>を提供しています。
+                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a>の一部を改変した<a href="https://github.com/nttcom/" target="_blank">JavaScriptライブラリ</a>、<a href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-iOS-SDK-0.1.0.zip">iOS SDK</a>、<a href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-Android-SDK-0.1.0.zip">Android SDK</a>を提供しています。
                 </p>
                 <ol>
                     <li>SkyWayのWebAPIを利用するため、開発者登録を行いAPIキーを申し込みます。<br><a class="btnM" href="https://skyway.io/ds/registration/">今すぐ開発者登録を行う (無料)</a>
                     </li>
 
                     <li><p>SkyWayを利用してアプリケーションを開発しましょう。</p>
-                        <p>2-1. JavaScriptライブラリをご利用の方</p>
-                        ライブラリをインクルードし、JavaScriptコードを書きましょう。
+                        <p class="underline">JavaScriptライブラリをご利用の方</p>
+                        コードサンプルを参考にライブラリをインクルードし、JavaScriptコードを書きましょう。<BR>
 
                         <div class="highlight">
 <pre><span class="nt">&lt;script </span><span class="na">src=</span><span
@@ -115,15 +115,15 @@ enableCanonical: true
 </pre>
                         </div>
 
-                        <p>2-2. iOS用SDKをご利用の方</p>
-                        SDKをダウンロードし、システムライブラリとフレームワークをあなたのアプリケーションに追加してください。<BR>
-                        <a class="btnG" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">iOS SDKをダウンロード（無料）</a><a class="btnG" href="docs/#iOS">iOS版サンプルアプリ</a><BR>
+                        <p class="underline">iOS SDKをご利用の方</p>
+                        SDKをダウンロードしたら、SkyWay.frameworkをXcodeプロジェクトに追加し、SkyWay iOS SDKのヘッダファイルをインポートしてください。<BR>
+                        <a class="btnG" href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-iOS-SDK-0.1.0.zip">iOS SDK（0.1.0）をダウンロード</a><a class="btnG" href="" target="_blank">iOS版サンプルアプリ</a><BR>
 
-                        <p>2-3. Android用SDKをご利用の方</p>
-                        SDKをダウンロードし、SkyWay.aarをあなたのアプリケーションに追加後にライブラリをインクルードしてください。<BR>
-                        <a class="btnG" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">Android SDKをダウンロード（無料）</a><a class="btnG" href="docs/#Android">Android版サンプルアプリ</a><BR>
+                        <p class="underline">Android SDKをご利用の方</p>
+                        SDKをダウンロードしたら、SkyWay.aarをアプリケーションに追加し、SkyWay Android SDKのクラスファイルをインポートしてください。<BR>
+                        <a class="btnG" href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-iOS-SDK-0.1.0.zip">Android SDK（0.1.0）をダウンロード</a><a class="btnG" href="" target="_blank">Android版サンプルアプリ</a><BR>
 
-                        <p>※JavaScriptライブラリとiOS/Android用SDKの間でWebRTCによる通信をこなう場合は、必ず、<a href="" target="_blank">こちらの注意事項</a>をご確認下さい。</p>
+                        <p>※JavaScriptライブラリとiOS/Android SDKの間でWebRTCによる通信をこなう場合は、必ず、<a href="" target="_blank">こちらの注意事項</a>をご確認下さい。</p>
 
                     </li>
                     <li>開発に必要な情報を収集しましょう。</p>

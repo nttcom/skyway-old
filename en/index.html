@@ -1,8 +1,8 @@
 ---
 layout: default_en
 title: SkyWay - A Simple and Flexible WebRTC Platform
-description: WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps using just JavaScript without having to worry about the server.
-ogDescription: WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps using just JavaScript without having to worry about the server.
+description: WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps without having to worry about the server.
+ogDescription: WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps without having to worry about the server.
 enableCanonical: true
 ---
 {% include assign_relative_path.html %}
@@ -17,7 +17,7 @@ enableCanonical: true
                 <h2 class="catchcopy">A Simple and Flexible WebRTC Platform</h2>
 
                 <p class="read">
-                    WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps using just JavaScript without having to worry about the server.</p>
+                    WebRTC is a revolutionary new technology that allows browsers to send video, audio and data to other browsers in real time. If you use SkyWay, you can easily create WebRTC apps without having to worry about the server.</p>
 
                 <div class="pointWrap">
                     <h3 class="realTime">Real time</h3>
@@ -27,7 +27,7 @@ enableCanonical: true
                 <div class="pointWrap">
                     <h3 class="multiDevice">Multidevice &amp; browser</h3>
 
-                    <p>Use the same code to run it on any WebRTC compatible browser*, regardless of whether it's on a PC or smart phone.<br><small>*Currently supported on Chrome(excluding iOS)and Firefox</small></p>
+                    <p>Use the same code to run it on any WebRTC compatible browser*, regardless of whether it's on a PC or smart phone. It can also be incorporated into smartphone native app.<br><small>*Currently supported on Chrome(excluding iOS)and Firefox</small></p>
                 </div>
                 <div class="pointWrap">
                     <h3 class="multimedia">Multimedia</h3
@@ -52,9 +52,11 @@ enableCanonical: true
     <div class="container clearfix">
         <div id="content_news" class="grid_12">
             <h2>News</h2>
-            <div class="grid_3 datepositon">2015.06.01</div>
+            <div class="grid_3 datepositon">2015.06.05</div>
             <div class="grid_9 omega newsbody">
-                Today between 2:50pm to 6:50pm JST, the SkyWay TURN service became unavailable due to unexpected complications during server maintenance. We are very sorry for any trouble this may have caused.<BR>
+                We have released a SkyWay iOS/Android SDK.<BR>
+                For more, see <a href="" target="_blank">News Release.</a><BR>
+                Please see <a href="docs/en">here</a> if you are interested.
             </div>
             <div class="grid_3 datepositon">2015.01.27</div>
             <div class="grid_9 omega newsbody">
@@ -83,14 +85,16 @@ enableCanonical: true
             <div class="grid_12 samplecode">
 
                 <p class="tac read">SkyWay provides a <a href="https://github.com/peers/peerjs-server"
-                                              target="_blank">PeerServer</a> compatible Web API and a modified <a
-                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a> JavaScript library.
+                                              target="_blank">PeerServer</a> compatible Web API, a modified <a
+                        href="https://github.com/peers/peerjs" target="_blank">PeerJS</a> JavaScript library, <a href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-iOS-SDK-0.1.0.zip">iOS SDK</a> and <a href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-Android-SDK-0.1.0.zip">Android SDK</a>.
                 </p>
                 <ol>
                     <li>Sign Up for SkyWay and apply for an API key to use the SkyWay WebAPI<br><a class="btnM" href="https://skyway.io/ds/registration/">Sign Up for SkyWay (free)</a>
                     </li>
 
-                    <li>Include the library and write the JavaScript code.
+                    <li>Developing an application using the SkyWay.
+                        <p class="underline">In case of using JavaScript library</p>
+                        Refer to the code sample, include the library and write the JavaScript code.<BR>
 
                         <div class="highlight">
 <pre><span class="nt">&lt;script </span><span class="na">src=</span><span
@@ -114,7 +118,20 @@ enableCanonical: true
 </pre>
                         </div>
 
-                        <a class="btnM" href="docs/#start">Read the start guide for more details</a><a class="btnM" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">Ask questions here</a>
+                        <p class="underline">In case of using iOS SDK</p>
+                        After downloading the SDK, add SkyWay.framework to your Xcode project and import header file.<BR>
+                        <a class="btnG" href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-iOS-SDK-0.1.0.zip">Download the iOS SDK（0.1.0）</a><a class="btnG" href="" target="_blank">Sample App for iOS</a><BR>
+
+                        <p class="underline">In case of using Android SDK</p>
+                        After downloading the SDK, Add SkyWay.aar to your application and import class files.<BR>
+                        <a class="btnG" href="http://skyway-ios-sdk.str.cloudn-service.com/0.1.0/SkyWay-iOS-SDK-0.1.0.zip">Download the Android SDK（0.1.0）</a><a class="btnG" href="" target="_blank">Sample App for Android</a><BR>
+
+                        <p>※ In case of WebRTC communication with JavaScript library and iOS/Android SDK, please check <a href="" target="_blank">here notes</a>.</p>
+
+                        <li>Gather information about for developing</p>
+                            <a class="btnM" href="docs/#start">Read the start guide for more details</a><a class="btnM" href="https://groups.google.com/forum/#!forum/skywayjs" target="_blank">Ask questions and information exchange here</a><BR>
+
+
                     </li>
                     <li>Use our Skyway optional services. (optional)<BR>
                         <a class="btnM" href="https://skyway.io/ds/turnrequest">Apply to use TURN Server (Free during alpha)</a>
